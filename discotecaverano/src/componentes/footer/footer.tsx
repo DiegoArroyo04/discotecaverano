@@ -2,7 +2,8 @@ import React from 'react';
 import './footer.css';
 
 export default function Footer() {
-    const handleRedirect = (url) => {
+    // Redirección para las redes sociales
+    const handleRedirect = (url: string) => {
         window.location.href = url;
     };
 
