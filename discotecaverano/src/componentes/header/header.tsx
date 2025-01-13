@@ -27,12 +27,17 @@ const Header: React.FC = () => {
         setMenuOpen(!menuOpen);
     };
 
+    // Redirección para las redes sociales
+    const handleRedirect = (url: string) => {
+        window.location.href = url;
+    };
+
     return (
         <>
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 {/* Logo */}
                 <div className="logo">
-                    <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image" />
+                    <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image" onClick={() => handleRedirect('#home')} />
                 </div>
 
                 {/* Navigation */}
@@ -53,18 +58,18 @@ const Header: React.FC = () => {
 
                 {/* Menú móvil */}
                 <nav className={`nav-mobile ${menuOpen ? 'open' : ''}`}>
-                    <a href="#home" className="nav-mobile-link">Horarios</a>
-                    <a href="#about" className="nav-mobile-link">Tarifas</a>
-                    <a href="#services" className="nav-mobile-link">Clases</a>
-                    <a href="#gallery" className="nav-mobile-link">Instalaciones</a>
+                    <a href="#home" className="nav-mobile-link">Inicio</a>
+                    <a href="#events" className="nav-mobile-link">Eventos</a>
+                    <a href="#tickets" className="nav-mobile-link">Entradas</a>
+                    <a href="#gallery" className="nav-mobile-link">Galería</a>
                     <a href="#contact" className="nav-mobile-link">Contacto</a>
                 </nav>
             </header>
 
             {/* Hero */}
-            <div className="hero">
+            <div className="hero" id="home">
                 <h1 className="hero-text">DESDE 1990 SIENDO LA MAYOR DISCOTECA DE VERANO Y REFERENCIA DE LA ZONA</h1>
-            </div>
+            </div >
         </>
     );
 };
