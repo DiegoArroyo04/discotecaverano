@@ -1,0 +1,167 @@
+/* Header container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vh;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: background 0.3s ease, height 0.3s ease;
+}
+
+/* Cambios cuando el header se ha desplazado */
+.header.scrolled {
+    background: #6c87ff;
+    height: 12vh;
+}
+
+/* Logo */
+.logo {
+    flex: 1;
+}
+
+.logo-image {
+    height: 100px;
+    transition: height 0.3s ease;
+}
+
+.header.scrolled .logo-image {
+    height: 60px;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    /* Mostrar siempre en escritorio */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 2;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.header.scrolled .nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: green;
+}
+
+/* Botón del menú hamburguesa (solo para móvil) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.menu-icon .line {
+    background-color: black;
+    height: 3px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon .line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon .line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Estilos de la navegación móvil */
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Oculta el menú inicialmente */
+    height: 100vh;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 12;
+    transition: right 0.3s ease;
+}
+
+.nav-mobile.open {
+    right: 0;
+}
+
+.nav-mobile-link {
+    margin: 15px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.nav-mobile-link:hover {
+    color: green;
+}
+
+/* Hero (background) */
+.hero {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../public/imagenes/disco.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-text {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        /* Oculta la barra de navegación en móvil */
+    }
+
+    .menu-icon {
+        display: flex;
+        /* Muestra el botón hamburguesa */
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+}
