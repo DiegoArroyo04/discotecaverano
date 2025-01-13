@@ -32,15 +32,15 @@ const Header: React.FC = () => {
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 {/* Logo */}
                 <div className="logo">
-                    <img src="logos/logo.png" alt="Logo Chancla" className="logo-image" />
+                    <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image" />
                 </div>
 
                 {/* Navigation */}
                 <nav className="nav">
-                    <a href="#home" className="nav-link">Horarios</a>
-                    <a href="#about" className="nav-link">Tarifas</a>
-                    <a href="#services" className="nav-link">Clases</a>
-                    <a href="#gallery" className="nav-link">Instalaciones</a>
+                    <a href="#home" className="nav-link">Inicio</a>
+                    <a href="#events" className="nav-link">Eventos</a>
+                    <a href="#tickets" className="nav-link">Entradas</a>
+                    <a href="#gallery" className="nav-link">Galería</a>
                     <a href="#contact" className="nav-link">Contacto</a>
                 </nav>
 
