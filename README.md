@@ -11,3 +11,6 @@ Selecciones
   cd discotecaverano
   npm install
   npm run dev
+
+# RUTAS Y REDIRECCIONES INSTALACION
+npm install react-router-dom

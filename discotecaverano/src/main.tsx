@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import './index.css'
 import Header from './componentes/header/header.tsx'
 import Footer from './componentes/footer/footer.tsx'
-import LegalNotice from './componentes/legalTexts/legalNotice.tsx'
+import AvisoLegal from './componentes/legalTexts/avisoLegal/legalNotice.tsx'
 
 const Home: React.FC = () => (
   <>
@@ -22,7 +22,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Home />} />
 
         {/*AVISO LEGAL*/}
-        <Route path="/legalNotice" element={<LegalNotice />} />
+        <Route path="/avisoLegal" element={<AvisoLegal />} />
+
 
       </Routes>
     </Router>

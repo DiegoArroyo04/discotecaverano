@@ -47,7 +47,7 @@ export default function Footer() {
             <div className='informacionLegal'>
                 <h2>Información Legal</h2>
                 <hr />
-                <Link className="enlaceFooter" to="/legalNotice">Aviso Legal</Link>
+                <Link className="enlaceFooter" to="/avisoLegal">Aviso Legal</Link>
                 <Link className="enlaceFooter" to="#">Política de Privacidad</Link>
                 <Link className="enlaceFooter" to="#">Política de Cookies</Link>
             </div>
