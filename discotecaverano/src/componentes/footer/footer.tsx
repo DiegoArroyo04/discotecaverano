@@ -1,6 +1,8 @@
 
 import './footer.css';
 
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     // Redirección para las redes sociales
     const handleRedirect = (url: string) => {
@@ -45,9 +47,9 @@ export default function Footer() {
             <div className='informacionLegal'>
                 <h2>Información Legal</h2>
                 <hr />
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
+                <Link className="enlaceFooter" to="/legalNotice">Aviso Legal</Link>
+                <Link className="enlaceFooter" to="#">Política de Privacidad</Link>
+                <Link className="enlaceFooter" to="#">Política de Cookies</Link>
             </div>
         </footer>
     );
