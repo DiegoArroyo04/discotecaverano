@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './eventos.css'
 
 type Evento = {
@@ -21,41 +21,67 @@ const eventosLista: Evento[] = [
 
         title: 'Retro Beats Festival con DJ Pastis',
         description: 'Vuelve al pasado con los sonidos más icónicos en la Retro Beats Festival en AURORA PARADISE. DJ Pastis te llevará en un viaje musical lleno de nostalgia y ritmos clásicos con un toque moderno. Disfruta de un ambiente lleno de luces neón vibrantes y una oferta especial: 5$ la entrada para los 50 primeros en entrar. ¡Ven a revivir los mejores momentos!',
-        fecha: 'Retro Beats Festival con DJ Pastis',
-        imageUrl: 'https://via.placeholder.com/300',
-        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        fecha: ' Viernes, 21 de Junio,A partir de las 22:00',
+        imageUrl: '../../imagenes/evento2.png',
+        videoUrl: 'D6ypkCZvz7s?si=D8WLhvjQ_OB5v8EZ'
     },
     {
 
-        title: 'Pool Party',
-        description: 'Disfruta de una pool party épica con DJ en vivo.',
-        fecha: '15/02/2025',
-        imageUrl: 'https://via.placeholder.com/300',
-        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        title: 'Midnight Groove Experience con DJ Groove"',
+        description: 'Déjate llevar por las vibraciones profundas del Midnight Groove Experience en AURORA PARADISE. DJ Groove traerá los ritmos más intensos para mantenerte bailando hasta el amanecer. Disfruta de una noche llena de energía, luces neón y buena música. No te pierdas nuestra oferta especial: Entrada gratis. ¡Ven a sentir el groove con nosotros!',
+        fecha: ' Viernes, 21 de Junio,A partir de las 23:30',
+        imageUrl: '../../imagenes/evento3.png',
+        videoUrl: '-syFI6iYzuY?si=f-KyekKV9of2Petp'
     }
 ];
 
 
 export default function eventos() {
+
+    // Estado para controlar la visibilidad del modal
+    const [modalAbierto, setModalAbierto] = useState<boolean>(false);
+    // Estado para almacenar el evento seleccionado
+    const [eventoSeleccionado, setEventoSeleccionado] = useState<Evento | null>(null);
+
+    // Función para abrir el modal y mostrar la imagen del evento seleccionado
+    const abrirModal = (evento: Evento) => {
+        setEventoSeleccionado(evento);
+        setModalAbierto(true);  // Abrimos el modal
+    };
+
+    // Función para cerrar el modal
+    const cerrarModal = () => {
+        setModalAbierto(false);  // Cerramos el modal
+        setEventoSeleccionado(null);  // Limpiamos el evento seleccionado
+    };
+
+
     return (
+
+
         <div className='eventos'>
-            {eventosLista.map((evento, index) => (
-                <div key={index} className='evento-card'>
-                    <img src={evento.imageUrl} alt={evento.title} className='evento-image' />
-                    <div className='evento-info'>
-                        <h3 className='evento-title'>{evento.title}</h3>
-                        <p className='evento-description'>{evento.description}</p>
-                        <iframe
-                            src={`https://www.youtube.com/embed/${evento.videoUrl}`}
-                            title={evento.title}
-                            className='evento-video'
-                            frameBorder='0'
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                            allowFullScreen
-                        ></iframe>
+            <h2 className='eventoEncabezado'>EVENTOS</h2>
+            <div className="imagenesEventos">
+                {eventosLista.map((evento, index) => (
+                    <div key={index} className='evento-card'>
+                        <img src={evento.imageUrl}
+                            alt={evento.title}
+                            className='evento-image'
+                            onClick={() => abrirModal(evento)} />
+                    </div>
+                ))}
+            </div>
+
+            {/*Si el Modal esta abierto mostramos el cartel del evento en grande */}
+            {modalAbierto && eventoSeleccionado && (
+                <div className="containerCartelGrande" onClick={cerrarModal}> {/* Cerramos el modal si hacemos clic fuera */}
+                    <div className="cartelGrande" onClick={(e) => e.stopPropagation()}> {/* Evita que el clic dentro del contenido cierre el modal */}
+                        <img src={eventoSeleccionado.imageUrl} alt={eventoSeleccionado.title} className="imagenGrande" />
+                        <button className='boton'>VER MAS INFORMACION SOBRE EL EVENTO</button>
                     </div>
                 </div>
-            ))}
+            )}
         </div>
+
     )
 };
