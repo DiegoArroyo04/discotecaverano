@@ -1,0 +1,54 @@
+/* Estilo para el contenedor de eventos */
+.eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para cada tarjeta de evento */
+.evento-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.evento-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la imagen del evento */
+.evento-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para el contenedor de la información del evento */
+.evento-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo para el título del evento */
+.evento-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Estilo para la descripción del evento */
+.evento-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el video del evento */
+.evento-video {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+}

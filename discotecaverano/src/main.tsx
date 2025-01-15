@@ -6,11 +6,16 @@ import './index.css'
 import Header from './componentes/header/header.tsx'
 import Footer from './componentes/footer/footer.tsx'
 import AvisoLegal from './componentes/legalTexts/avisoLegal/legalNotice.tsx'
+import ContactoUbicacion from './componentes/contactoUbicacion/contactoUbicacion.tsx'
+import Eventos from './componentes/eventos/eventos.tsx'
 
 const Home: React.FC = () => (
   <>
     <Header />
+    <Eventos />
+    <ContactoUbicacion />
     <Footer />
+
   </>
 );
 
