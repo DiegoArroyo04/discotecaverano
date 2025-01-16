@@ -48,8 +48,8 @@ export default function Footer() {
                 <h2>Información Legal</h2>
                 <hr />
                 <Link className="enlaceFooter" to="/avisoLegal">Aviso Legal</Link>
-                <Link className="enlaceFooter" to="#">Política de Privacidad</Link>
-                <Link className="enlaceFooter" to="#">Política de Cookies</Link>
+                <Link className="enlaceFooter" to="/politicaPrivacidad">Política de Privacidad</Link>
+                <Link className="enlaceFooter" to="/politicaCookies">Política de Cookies</Link>
             </div>
         </footer>
     );
