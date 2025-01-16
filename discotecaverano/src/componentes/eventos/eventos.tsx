@@ -11,7 +11,7 @@ type Evento = {
 
 const eventosLista: Evento[] = [
     {
-        title: 'Neon Fire Night con DJ Blaze',
+        title: 'Neon Fire Festival con DJ Blaze',
         description: 'Prepárate para una noche explosiva en AURORA PARADISE con la presencia de DJ Blaze, quien encenderá la pista de baile con los mejores beats de la temporada. Sumérgete en una atmósfera electrizante con luces neón y una energía sin igual. Aprovecha nuestra oferta especial: Entrada con consumicion 10$. ¡No te pierdas esta noche inolvidable!',
         fecha: 'Viernes, 7 de Junio,A partir de las 22:00',
         imageUrl: '../../imagenes/evento1.png',
@@ -27,7 +27,7 @@ const eventosLista: Evento[] = [
     },
     {
 
-        title: 'Midnight Groove Experience con DJ Groove"',
+        title: 'Midnight Groove Experience con DJ Groove',
         description: 'Déjate llevar por las vibraciones profundas del Midnight Groove Experience en AURORA PARADISE. DJ Groove traerá los ritmos más intensos para mantenerte bailando hasta el amanecer. Disfruta de una noche llena de energía, luces neón y buena música. No te pierdas nuestra oferta especial: Entrada gratis. ¡Ven a sentir el groove con nosotros!',
         fecha: ' Viernes, 21 de Junio,A partir de las 23:30',
         imageUrl: '../../imagenes/evento3.png',
@@ -40,6 +40,9 @@ export default function eventos() {
 
     // Estado para controlar la visibilidad del modal
     const [modalAbierto, setModalAbierto] = useState<boolean>(false);
+    // Estado para manejar si la tarjeta está girada
+    const [tarjetaGirada, setTarjetaGirada] = useState(false);
+
     // Estado para almacenar el evento seleccionado
     const [eventoSeleccionado, setEventoSeleccionado] = useState<Evento | null>(null);
 
@@ -47,14 +50,19 @@ export default function eventos() {
     const abrirModal = (evento: Evento) => {
         setEventoSeleccionado(evento);
         setModalAbierto(true);  // Abrimos el modal
+        setTarjetaGirada(false);
     };
 
     // Función para cerrar el modal
     const cerrarModal = () => {
         setModalAbierto(false);  // Cerramos el modal
         setEventoSeleccionado(null);  // Limpiamos el evento seleccionado
+        setTarjetaGirada(false);
     };
 
+    const girarTarjeta = () => {
+        setTarjetaGirada(!tarjetaGirada);
+    };
 
     return (
 
@@ -72,12 +80,33 @@ export default function eventos() {
                 ))}
             </div>
 
-            {/*Si el Modal esta abierto mostramos el cartel del evento en grande */}
+
             {modalAbierto && eventoSeleccionado && (
-                <div className="containerCartelGrande" onClick={cerrarModal}> {/* Cerramos el modal si hacemos clic fuera */}
-                    <div className="cartelGrande" onClick={(e) => e.stopPropagation()}> {/* Evita que el clic dentro del contenido cierre el modal */}
-                        <img src={eventoSeleccionado.imageUrl} alt={eventoSeleccionado.title} className="imagenGrande" />
-                        <button className='boton'>VER MAS INFORMACION SOBRE EL EVENTO</button>
+                <div className="containerCartelGrande" onClick={cerrarModal}>
+                    <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
+                        <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <img src={eventoSeleccionado.imageUrl} alt={eventoSeleccionado.title} className="imagenGrande" />
+                                    <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
+                                </div>
+                                <div className="flip-card-back">
+                                    <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
+                                    <p>{eventoSeleccionado.description}</p>
+                                    <p>Entrada Prohibida para menores de 16 años.</p>
+                                    <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.</p>
+                                    <p className='fecha'>{eventoSeleccionado.fecha}</p>
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${eventoSeleccionado.videoUrl}`}
+                                        frameBorder="0"
+                                        allow="autoplay; encrypted-media"
+                                        allowFullScreen
+                                        className="videoIframe">
+                                    </iframe>
+                                    <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
