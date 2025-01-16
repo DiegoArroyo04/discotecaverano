@@ -29,10 +29,7 @@ const Header: React.FC = () => {
         setMenuOpen(!menuOpen);
     };
 
-    // Redirección para las redes sociales
-    const handleRedirect = (url: string) => {
-        window.location.href = url;
-    };
+
 
     return (
         <>  <Element name="home">
