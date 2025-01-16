@@ -103,8 +103,7 @@ export default function eventos() {
                                     <div className="flip-card-back">
                                         <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
                                         <p>{eventoSeleccionado.description}</p>
-                                        <p>Entrada Prohibida para menores de 16 años.</p>
-                                        <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.</p>
+                                        <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.<br />Entrada Prohibida para menores de 16 años </p>
                                         <p className='fecha'>{eventoSeleccionado.fecha}</p>
                                         <iframe
                                             src={`https://www.youtube.com/embed/${eventoSeleccionado.videoUrl}`}
