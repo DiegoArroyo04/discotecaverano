@@ -14,20 +14,10 @@
     right: 0;
     z-index: 10;
     transition: background 0.3s ease, height 0.3s ease;
-    animation: fadeIn 1.5s ease-in-out;
+
 }
 
 
-/* Definir la animación */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /* Cambios cuando el header se ha desplazado */
 .header.scrolled {
