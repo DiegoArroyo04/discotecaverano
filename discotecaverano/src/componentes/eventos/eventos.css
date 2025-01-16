@@ -292,39 +292,70 @@ p.fecha {
 @media (max-width: 992px) {
 
     /* Dispositivos: Laptops pequeñas, tablets en orientación vertical */
-    .flip-card-back h3 {
-        font-size: 1.6rem;
+
+
+    .flip-card-back {
+        padding: 1%;
+
+    }
+
+    .eventoTitulo {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .flip-card-back p {
-        font-size: 1rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
     }
 
+    p.fecha {
+        font-size: 0.8rem;
 
+    }
+
+    .flip-card-back .videoIframe {
+        height: 200px;
+        margin-bottom: 0.7rem;
+    }
 
     .botonCerrar {
-        font-size: 1.1rem;
+        font-size: 0.7rem;
     }
 }
 
 /* Media Query para tablets pequeñas y phablets (entre 768px y 991px) */
 @media (max-width: 768px) {
 
-    /* Dispositivos: Tablets pequeñas, phablets */
-    .flip-card-back h3 {
-        font-size: 1.4rem;
+    /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
+
+    .flip-card-back {
+        padding: 1%;
+
+    }
+
+    .eventoTitulo {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .flip-card-back p {
-        font-size: 0.95rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p.fecha {
+        font-size: 0.8rem;
+
     }
 
     .flip-card-back .videoIframe {
         height: 200px;
+        margin-bottom: 0.7rem;
     }
 
     .botonCerrar {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -332,20 +363,35 @@ p.fecha {
 @media (max-width: 576px) {
 
     /* Dispositivos: Smartphones grandes (iPhone Plus, Galaxy S series) */
-    .flip-card-back h3 {
-        font-size: 1.2rem;
+    /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
+
+    .flip-card-back {
+        padding: 1%;
+
+    }
+
+    .eventoTitulo {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .flip-card-back p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p.fecha {
+        font-size: 0.8rem;
+
     }
 
     .flip-card-back .videoIframe {
-        height: 180px;
+        height: 200px;
+        margin-bottom: 0.7rem;
     }
 
     .botonCerrar {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -353,20 +399,35 @@ p.fecha {
 @media (max-width: 480px) {
 
     /* Dispositivos: Smartphones medianos (iPhone, Pixel) */
-    .flip-card-back h3 {
+    /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
+
+    .flip-card-back {
+        padding: 1%;
+        width: 70%;
+    }
+
+    .eventoTitulo {
         font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .flip-card-back p {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p.fecha {
+        font-size: 0.8rem;
+
     }
 
     .flip-card-back .videoIframe {
-        height: 150px;
+        height: 100px;
+        margin-bottom: 0.7rem;
     }
 
     .botonCerrar {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -374,19 +435,34 @@ p.fecha {
 @media (max-width: 320px) {
 
     /* Dispositivos: Smartphones pequeños (iPhone SE, teléfonos básicos Android) */
-    .flip-card-back h3 {
-        font-size: 0.9rem;
+    /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
+
+    .flip-card-back {
+        padding: 1%;
+
+    }
+
+    .eventoTitulo {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .flip-card-back p {
+        font-size: 0.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p.fecha {
         font-size: 0.8rem;
+
     }
 
     .flip-card-back .videoIframe {
-        height: 120px;
+        height: 100px;
+        margin-bottom: 0.7rem;
     }
 
     .botonCerrar {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
