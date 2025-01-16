@@ -5,7 +5,7 @@
   line-height: 1.5;
   font-weight: 500;
 
-  color-scheme: light dark;
+
   color: rgba(255, 255, 255, 0.87);
   background: #1a1a1a;
 
@@ -28,19 +28,4 @@ a:hover {
 body {
   margin: 0;
   overflow-x: hidden;
-}
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-
 }
