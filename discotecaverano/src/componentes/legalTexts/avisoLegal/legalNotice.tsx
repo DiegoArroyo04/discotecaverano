@@ -1,8 +1,14 @@
 
+import { useEffect } from 'react';
 import './legalNotice.css';
 import { Link } from "react-router-dom";
 
 export default function LegalNotice() {
+    useEffect(() => {
+        // Desplazar automáticamente hacia arriba cuando el componente se monta o recarga
+        window.scrollTo(0, 0);
+    }, []); // El array vacío significa que solo se ejecuta una vez al montarse el componente
+
     return (
         <div className="legalNotice">
             <h1>Aviso Legal</h1>

@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import './politicaPrivacidad.css'
 import { Link } from "react-router-dom";
 
 export default function PoliticaPrivacidad() {
+    useEffect(() => {
+        // Desplazar automáticamente hacia arriba cuando el componente se monta o recarga
+        window.scrollTo(0, 0);
+    }, []); // El array vacío significa que solo se ejecuta una vez al montarse el componente
+
     return (
         <div className='politicaPrivacidad'>
             <h1>Política de Privacidad</h1>
