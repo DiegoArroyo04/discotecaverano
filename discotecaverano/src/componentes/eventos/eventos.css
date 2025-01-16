@@ -225,12 +225,12 @@ p.fecha {
 .botones {
     width: 80%;
     display: flex;
+    margin: 4%;
 }
 
 .botonCerrar {
     width: 50%;
     padding: 0.8rem;
-    margin: 4%;
     background: #00FFFF;
     border: none;
     border-radius: 18px;
@@ -239,6 +239,7 @@ p.fecha {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: 4%;
 }
 
 .botonCerrar:hover {
@@ -249,17 +250,78 @@ p.fecha {
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
-    .cartelGrande {
-        width: 90%;
-    }
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
 
     .flip-card {
-        width: 80%;
+        width: 100%;
+        height: 100%;
+
     }
 
     .flip-card-inner {
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .imagenGrande {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .eventoTitulo {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .videoIframe {
+        width: 70%;
+        height: 250px;
+    }
+
+    .botonCerrar {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .boton {
+        font-size: 1rem;
+    }
+
+    .containerCartelGrande {
+        padding: 0 1rem;
+    }
+
+    .cartelGrande {
+        height: 100%;
+    }
+
+    .flip-card-back p {
+        margin: 0.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .cartelGrande {
+        width: 90%;
+        height: 100%;
+    }
+
+    .flip-card {
+        width: 80%;
+        height: 100%;
+    }
+
+    .flip-card-back {
+        width: 100%;
+        height: auto;
+    }
+
+    .flip-card-inner {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .imagenGrande {
@@ -293,6 +355,7 @@ p.fecha {
 @media (max-width: 480px) {
     .cartelGrande {
         width: 95%;
+        height: 100%;
         justify-content: center;
     }
 
@@ -316,6 +379,7 @@ p.fecha {
     .imagenGrande {
         width: 100%;
         margin-bottom: 3%;
+
     }
 
     .eventoTitulo {
