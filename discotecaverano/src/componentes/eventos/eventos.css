@@ -217,10 +217,15 @@ p.fecha {
     border-radius: 10px;
 }
 
-.botonCerrar {
+.botones {
     width: 80%;
+    display: flex;
+}
+
+.botonCerrar {
+    width: 50%;
     padding: 0.8rem;
-    margin: 4% 0;
+    margin: 4%;
     background: #00FFFF;
     border: none;
     border-radius: 18px;

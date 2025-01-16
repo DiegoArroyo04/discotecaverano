@@ -43,8 +43,8 @@ const Header: React.FC = () => {
                 {/* Navigation */}
                 <nav className="nav">
                     <a href="#home" className="nav-link">Inicio</a>
-                    <a href="#events" className="nav-link">Eventos</a>
-                    <a href="#tickets" className="nav-link">Entradas</a>
+                    <a href="#eventos" className="nav-link">Eventos</a>
+                    <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-link">Entradas</a>
                     <a href="#gallery" className="nav-link">Galería</a>
                     <a href="#contact" className="nav-link">Contacto</a>
                 </nav>

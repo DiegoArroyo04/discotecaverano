@@ -7,6 +7,7 @@ type Evento = {
     fecha: string;
     imageUrl: string;
     videoUrl: string;
+    entradas: string;
 };
 
 const eventosLista: Evento[] = [
@@ -15,7 +16,8 @@ const eventosLista: Evento[] = [
         description: 'Prepárate para una noche explosiva en AURORA PARADISE con la presencia de DJ Blaze, quien encenderá la pista de baile con los mejores beats de la temporada. Sumérgete en una atmósfera electrizante con luces neón y una energía sin igual. Aprovecha nuestra oferta especial: Entrada con consumicion 10$. ¡No te pierdas esta noche inolvidable!',
         fecha: 'Viernes, 7 de Junio,A partir de las 22:00',
         imageUrl: '../../imagenes/evento1.png',
-        videoUrl: 'ZN631iYm7cM?si=XPe-MuOvTJICsccj'
+        videoUrl: 'ZN631iYm7cM?si=XPe-MuOvTJICsccj',
+        entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/saturday-night-01-02-2025-JEAV'
     },
     {
 
@@ -23,7 +25,8 @@ const eventosLista: Evento[] = [
         description: 'Vuelve al pasado con los sonidos más icónicos en la Retro Beats Festival en AURORA PARADISE. DJ Pastis te llevará en un viaje musical lleno de nostalgia y ritmos clásicos con un toque moderno. Disfruta de un ambiente lleno de luces neón vibrantes y una oferta especial: 5$ la entrada para los 50 primeros en entrar. ¡Ven a revivir los mejores momentos!',
         fecha: ' Viernes, 21 de Junio,A partir de las 22:00',
         imageUrl: '../../imagenes/evento2.png',
-        videoUrl: 'D6ypkCZvz7s?si=D8WLhvjQ_OB5v8EZ'
+        videoUrl: 'D6ypkCZvz7s?si=D8WLhvjQ_OB5v8EZ',
+        entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/miercoles-teatro-barcelo-05-02-2025-MQ9O'
     },
     {
 
@@ -31,7 +34,8 @@ const eventosLista: Evento[] = [
         description: 'Déjate llevar por las vibraciones profundas del Midnight Groove Experience en AURORA PARADISE. DJ Groove traerá los ritmos más intensos para mantenerte bailando hasta el amanecer. Disfruta de una noche llena de energía, luces neón y buena música. No te pierdas nuestra oferta especial: Entrada gratis. ¡Ven a sentir el groove con nosotros!',
         fecha: ' Viernes, 21 de Junio,A partir de las 23:30',
         imageUrl: '../../imagenes/evento3.png',
-        videoUrl: '-syFI6iYzuY?si=f-KyekKV9of2Petp'
+        videoUrl: '-syFI6iYzuY?si=f-KyekKV9of2Petp',
+        entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/perreolab--511-08-02-2025-2XXQ'
     }
 ];
 
@@ -64,10 +68,15 @@ export default function eventos() {
         setTarjetaGirada(!tarjetaGirada);
     };
 
+    // Redirección Entradas
+    const handleRedirect = (url: string) => {
+        window.location.href = url;
+    };
+
     return (
 
 
-        <div className='eventos'>
+        <div id="eventos" className='eventos'>
             <h2 className='eventoEncabezado'>EVENTOS</h2>
             <div className="imagenesEventos">
                 {eventosLista.map((evento, index) => (
@@ -103,7 +112,11 @@ export default function eventos() {
                                         allowFullScreen
                                         className="videoIframe">
                                     </iframe>
-                                    <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
+                                    <div className='botones'>
+                                        <button className='botonCerrar' onClick={() => handleRedirect(`${eventoSeleccionado.entradas}`)}>Comprar Entradas</button>
+                                        <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
