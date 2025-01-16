@@ -10,6 +10,7 @@ import PoliticaCookies from './componentes/legalTexts/politicaCookies/politicaCo
 import PoliticaPrivacidad from './componentes/legalTexts/politicaPrivacidad/politicaPrivacidad.tsx'
 import ContactoUbicacion from './componentes/contactoUbicacion/contactoUbicacion.tsx'
 import Eventos from './componentes/eventos/eventos.tsx'
+import UltimoEvento from './componentes/modalHome/modalHome.tsx'
 
 const Home: React.FC = () => {
 
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
     <>
       {/* Aquí va tu contenido */}
       <Header />
+      <UltimoEvento />
       <Eventos />
       <ContactoUbicacion />
       <Footer />
