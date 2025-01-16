@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './contactoUbicacion.css'
 
 export default function contactoUbicacion() {
