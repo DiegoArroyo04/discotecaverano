@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './eventos.css'
+import { Element } from 'react-scroll';
 
 type Evento = {
     title: string;
@@ -75,55 +76,55 @@ export default function eventos() {
 
     return (
 
+        <Element name="eventos">
+            <div className='eventos'>
+                <h2 className='eventoEncabezado'>EVENTOS</h2>
+                <div className="imagenesEventos">
+                    {eventosLista.map((evento, index) => (
+                        <div key={index} className='evento-card'>
+                            <img src={evento.imageUrl}
+                                alt={evento.title}
+                                className='evento-image'
+                                onClick={() => abrirModal(evento)} />
+                        </div>
+                    ))}
+                </div>
 
-        <div id="eventos" className='eventos'>
-            <h2 className='eventoEncabezado'>EVENTOS</h2>
-            <div className="imagenesEventos">
-                {eventosLista.map((evento, index) => (
-                    <div key={index} className='evento-card'>
-                        <img src={evento.imageUrl}
-                            alt={evento.title}
-                            className='evento-image'
-                            onClick={() => abrirModal(evento)} />
-                    </div>
-                ))}
-            </div>
 
-
-            {modalAbierto && eventoSeleccionado && (
-                <div className="containerCartelGrande" onClick={cerrarModal}>
-                    <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
-                        <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <img src={eventoSeleccionado.imageUrl} alt={eventoSeleccionado.title} className="imagenGrande" />
-                                    <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
-                                </div>
-                                <div className="flip-card-back">
-                                    <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
-                                    <p>{eventoSeleccionado.description}</p>
-                                    <p>Entrada Prohibida para menores de 16 años.</p>
-                                    <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.</p>
-                                    <p className='fecha'>{eventoSeleccionado.fecha}</p>
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${eventoSeleccionado.videoUrl}`}
-                                        frameBorder="0"
-                                        allow="autoplay; encrypted-media"
-                                        allowFullScreen
-                                        className="videoIframe">
-                                    </iframe>
-                                    <div className='botones'>
-                                        <button className='botonCerrar' onClick={() => handleRedirect(`${eventoSeleccionado.entradas}`)}>Comprar Entradas</button>
-                                        <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
+                {modalAbierto && eventoSeleccionado && (
+                    <div className="containerCartelGrande" onClick={cerrarModal}>
+                        <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
+                            <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
+                                <div className="flip-card-inner">
+                                    <div className="flip-card-front">
+                                        <img src={eventoSeleccionado.imageUrl} alt={eventoSeleccionado.title} className="imagenGrande" />
+                                        <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
                                     </div>
+                                    <div className="flip-card-back">
+                                        <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
+                                        <p>{eventoSeleccionado.description}</p>
+                                        <p>Entrada Prohibida para menores de 16 años.</p>
+                                        <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.</p>
+                                        <p className='fecha'>{eventoSeleccionado.fecha}</p>
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${eventoSeleccionado.videoUrl}`}
+                                            frameBorder="0"
+                                            allow="autoplay; encrypted-media"
+                                            allowFullScreen
+                                            className="videoIframe">
+                                        </iframe>
+                                        <div className='botones'>
+                                            <button className='botonCerrar' onClick={() => handleRedirect(`${eventoSeleccionado.entradas}`)}>Comprar Entradas</button>
+                                            <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
-
+                )}
+            </div>
+        </Element>
     )
 };

@@ -14,3 +14,5 @@ Selecciones
 
 # RUTAS Y REDIRECCIONES INSTALACION
 npm install react-router-dom
+npm install react-scroll
+npm install --save-dev @types/react-scroll
