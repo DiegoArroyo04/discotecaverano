@@ -17,7 +17,6 @@
 
     text-align: center;
     line-height: 1.1;
-    animation: glow 1.5s infinite alternate;
 
 }
 
@@ -30,6 +29,7 @@
     justify-content: space-between;
 
 }
+
 
 .evento-card {
     width: 100%;

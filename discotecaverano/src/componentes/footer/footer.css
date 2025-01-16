@@ -6,6 +6,7 @@ footer {
     color: #FFFFFF;
     margin-top: 4%;
     padding: 1%;
+    flex-wrap: wrap;
 }
 
 
@@ -77,4 +78,65 @@ footer {
     transition: color 0.3s ease, text-shadow 0.3s ease;
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoRSSS,
+    .copy,
+    .informacionLegal {
+        width: 100%;
+        /* Cada sección ocupa el 100% del ancho en pantallas más pequeñas */
+        text-align: center;
+        /* Centra el contenido */
+        margin-bottom: 1rem;
+    }
+
+    .logoRSSS img {
+        height: 12vh;
+        /* Ajustamos el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .rsss img {
+        width: 30px;
+        /* Aumentamos el tamaño de los íconos en pantallas pequeñas */
+        height: 30px;
+    }
+
+    .informacionLegal hr {
+        width: 50%;
+        /* Ajustamos el ancho de la línea en pantallas pequeñas */
+    }
+
+    .copy p {
+        font-size: 1rem;
+        /* Reducimos el tamaño del texto */
+    }
+
+    .enlaceFooter {
+        font-size: 1rem;
+        /* Reducimos el tamaño del texto de los enlaces */
+    }
+}
+
+@media (max-width: 480px) {
+    .logoRSSS img {
+        height: 15vh;
+        /* Ajustamos aún más el tamaño del logo para pantallas muy pequeñas */
+    }
+
+    .rsss img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .copy p {
+        font-size: 0.9rem;
+        /* Ajustamos el tamaño de la fuente aún más */
+    }
 }

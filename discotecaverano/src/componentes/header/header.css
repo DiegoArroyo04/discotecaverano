@@ -172,20 +172,124 @@
 }
 
 
-
 /* Media Queries */
-@media (max-width: 768px) {
+/* Estilo para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+        height: 15vh;
+    }
+
+    .logo-image {
+        height: 50px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+
+    }
+
     .nav {
         display: none;
-        /* Oculta la barra de navegación en móvil */
+        /* Oculta el menú */
     }
 
     .menu-icon {
         display: flex;
-        /* Muestra el botón hamburguesa */
+        /* Muestra el menú hamburguesa */
     }
 
     .nav-mobile {
         display: flex;
+        /* Menú móvil */
+        padding-top: 50px;
+    }
+
+    .nav-mobile-link {
+        font-size: 1rem;
+    }
+}
+
+/* Estilo para dispositivos móviles medianos (tabletas y pantallas pequeñas) */
+@media (max-width: 768px) {
+    .header {
+        height: 18vh;
+    }
+
+    .logo-image {
+        height: 70px;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    .hero-text {
+        font-size: 3rem;
+
+    }
+
+    .nav {
+        display: none;
+        /* Oculta el menú */
+    }
+
+    .menu-icon {
+        display: flex;
+        /* Muestra el menú hamburguesa */
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+
+    .nav-mobile-link {
+        font-size: 1.1rem;
+    }
+}
+
+/* Estilo para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1024px) {
+    .header {
+        height: 20vh;
+        padding: 0 30px;
+    }
+
+    .logo-image {
+        height: 100px;
+    }
+
+    .nav {
+        display: flex;
+        /* Navegación horizontal visible */
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .hero-text {
+        font-size: 4rem;
+        text-shadow:
+            0 0 4px rgb(11, 103, 209),
+            0 0 8px rgb(11, 103, 209),
+            0px 0px 12px rgb(11, 103, 209),
+            0px 0px 20px rgb(11, 103, 209),
+            0px 0px 30px rgb(11, 103, 209);
+    }
+}
+
+/* Estilo para pantallas extra grandes */
+@media (min-width: 1440px) {
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
     }
 }
