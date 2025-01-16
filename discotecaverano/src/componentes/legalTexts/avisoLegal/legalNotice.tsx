@@ -1,5 +1,6 @@
 
 import './legalNotice.css';
+import { Link } from "react-router-dom";
 
 export default function LegalNotice() {
     return (
@@ -15,6 +16,9 @@ export default function LegalNotice() {
             <p>
                 Para cualquier consulta, por favor contacte con nosotros en diegoarroyogonzalez04@gmail.com.
             </p>
+            <Link to="/">
+                VOLVER AL INICIO
+            </Link>
         </div>
     );
 }

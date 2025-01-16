@@ -33,7 +33,7 @@ const eventosLista: Evento[] = [
 
         title: 'Midnight Groove Experience con DJ Groove',
         description: 'Déjate llevar por las vibraciones profundas del Midnight Groove Experience en AURORA PARADISE. DJ Groove traerá los ritmos más intensos para mantenerte bailando hasta el amanecer. Disfruta de una noche llena de energía, luces neón y buena música. No te pierdas nuestra oferta especial: Entrada gratis. ¡Ven a sentir el groove con nosotros!',
-        fecha: ' Viernes, 21 de Junio,A partir de las 23:30',
+        fecha: ' Viernes, 22 de Junio,A partir de las 23:30',
         imageUrl: '../../imagenes/evento3.png',
         videoUrl: '-syFI6iYzuY?si=f-KyekKV9of2Petp',
         entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/perreolab--511-08-02-2025-2XXQ'

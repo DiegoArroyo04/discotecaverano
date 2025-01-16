@@ -1,0 +1,90 @@
+/* Fondo general */
+.politicaPrivacidad {
+    background: linear-gradient(135deg, #9b4d96, #ae79f5);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado principal */
+.politicaPrivacidad h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* Subtítulos de secciones */
+.politicaPrivacidad h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f4a300;
+}
+
+/* Párrafos */
+.politicaPrivacidad p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: justify;
+}
+
+/* Párrafos destacados */
+.politicaPrivacidad p strong {
+    color: #f4a300;
+}
+
+/* Estilos para el enlace de contacto como botón */
+.politicaPrivacidad a {
+    display: inline-block;
+    background: #f4a300;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+.politicaPrivacidad a:hover {
+    background-color: #ffb81c;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.politicaPrivacidad a:active {
+    background-color: #e28a00;
+    transform: translateY(0);
+}
+
+/* Animación de fade-in */
+.politicaPrivacidad {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Definir la animación */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

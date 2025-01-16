@@ -59,9 +59,8 @@ const Header: React.FC = () => {
 
                 {/* Menú móvil */}
                 <nav className={`nav-mobile ${menuOpen ? 'open' : ''}`}>
-                    <a href="#home" className="nav-mobile-link" onClick={toggleMenu}>Inicio</a>
-                    <a href="#eventos" className="nav-mobile-link" onClick={toggleMenu}>Eventos</a>
-                    <a href="#tickets" className="nav-mobile-link" onClick={toggleMenu}>Entradas</a>
+                    <ScrollLink to="eventos" smooth={true} duration={500} offset={-90} className="nav-mobile-link" onClick={toggleMenu}>Eventos</ScrollLink>
+                    <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-mobile-link" onClick={toggleMenu}>Entradas</a>
                     <a href="#gallery" className="nav-mobile-link" onClick={toggleMenu}>Galería</a>
                     <a href="#contact" className="nav-mobile-link" onClick={toggleMenu}>Contacto</a>
                 </nav>

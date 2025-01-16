@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
+import { useEffect } from "react";
 import './index.css'
 import Header from './componentes/header/header.tsx'
 import Footer from './componentes/footer/footer.tsx'
@@ -11,15 +11,25 @@ import PoliticaPrivacidad from './componentes/legalTexts/politicaPrivacidad/poli
 import ContactoUbicacion from './componentes/contactoUbicacion/contactoUbicacion.tsx'
 import Eventos from './componentes/eventos/eventos.tsx'
 
-const Home: React.FC = () => (
-  <>
-    <Header />
-    <Eventos />
-    <ContactoUbicacion />
-    <Footer />
+const Home: React.FC = () => {
 
-  </>
-);
+  useEffect(() => {
+    // Desplazar automáticamente hacia arriba cuando el componente se monta o recarga
+    window.scrollTo(0, 0);
+  }, []); // El array vacío significa que solo se ejecuta una vez al montarse el componente
+
+  return (
+    <>
+      {/* Aquí va tu contenido */}
+      <Header />
+      <Eventos />
+      <ContactoUbicacion />
+      <Footer />
+    </>
+  );
+}
+
+export default Home;
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
