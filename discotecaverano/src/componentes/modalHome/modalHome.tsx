@@ -47,7 +47,7 @@ export default function modalHome() {
           <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
             <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
               <div className="flip-card-inner">
-                <div className="flip-card-front">
+                <div className="popUpDelante">
                   <img src={ultimoEvento.imageUrl} alt={ultimoEvento.title} className="imagenGrande" />
                   <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
                 </div>

@@ -77,7 +77,11 @@
     transform: rotateY(180deg);
 }
 
-.flip-card-front,
+.popUpDelante {
+    animation: parpadeoScale 2s infinite;
+}
+
+.popUpDelante,
 .flip-card-back {
     position: absolute;
     height: 100%;
