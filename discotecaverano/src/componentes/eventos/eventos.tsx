@@ -86,6 +86,7 @@ export default function eventos() {
                                 alt={evento.title}
                                 className='evento-image'
                                 onClick={() => abrirModal(evento)} />
+                            <h3 className='fechaCartel'>{evento.fecha}</h3>
                         </div>
                     ))}
                 </div>

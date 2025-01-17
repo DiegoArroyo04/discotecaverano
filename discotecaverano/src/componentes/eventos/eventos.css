@@ -36,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .evento-image {
@@ -52,6 +53,25 @@
     transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 0 20px rgb(11, 103, 209), 0 0 40px rgb(11, 103, 209), 0 0 60px rgb(11, 103, 209);
+}
+
+.fechaCartel {
+    color: #FF69B4;
+    /* Color principal del texto en rosa */
+    font-size: 1;
+    /* Ajuste del tamaño para h3 */
+    font-weight: bold;
+    text-shadow:
+        0 0 4px rgba(243, 5, 124, 0.7),
+        /* Sombras en rosa más suave */
+        0 0 8px rgba(250, 83, 160, 0.7),
+        0 0 12px rgba(243, 5, 124, 0.7),
+        0 0 16px rgba(250, 83, 160, 0.7),
+        0 0 20px rgba(243, 5, 124, 0.7);
+
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 2rem;
 }
 
 /* Animación de Pop-up para el modal */
