@@ -1,0 +1,77 @@
+.patrocinadoresSection {
+    text-align: center;
+    margin: 4% 0;
+}
+
+.tituloPatrocinadores {
+    color: #00FFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow:
+        0 0 4px rgb(11, 103, 209),
+        0 0 8px rgb(11, 103, 209),
+        0px 0px 12px rgb(11, 103, 209),
+        0px 0px 20px rgb(11, 103, 209),
+        0px 0px 30px rgb(11, 103, 209);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.patrocinadoresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    justify-items: center;
+    align-items: center;
+    margin: 4% 0;
+}
+
+
+.logoBarcelo,
+.logoHeineken,
+.logoEstrellaGalicia {
+    width: 150px;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6)) drop-shadow(0 0 10px rgba(11, 103, 209, 0.8)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.logoBarcelo:hover,
+.logoHeineken:hover,
+.logoEstrellaGalicia:hover {
+    transform: scale(1.1);
+
+}
+
+/* CAMBIAR LA IMAGEN A VERDE */
+.logoBarcelo:hover {
+    content: url('../../../logos/logoBarceloVerde.png');
+}
+
+.logoHeineken:hover {
+    content: url('../../../logos/heinekenLogoVerde.png');
+}
+
+.logoEstrellaGalicia:hover {
+    content: url('../../../logos/logoEstrellaGaliciaVerde.png');
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+    .tituloPatrocinadores {
+        font-size: 2rem;
+    }
+
+    .patrocinadoresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .logoBarcelo,
+    .logoHeineken,
+    .logoEstrellaGalicia {
+        width: 120px;
+        margin: 2%;
+    }
+}

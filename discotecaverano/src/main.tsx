@@ -11,6 +11,7 @@ import PoliticaPrivacidad from './componentes/legalTexts/politicaPrivacidad/poli
 import ContactoUbicacion from './componentes/contactoUbicacion/contactoUbicacion.tsx'
 import Eventos from './componentes/eventos/eventos.tsx'
 import UltimoEvento from './componentes/modalHome/modalHome.tsx'
+import Patrocinadores from './componentes/patrocinadores/patrocinadores.tsx';
 
 const Home: React.FC = () => {
 
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
       <Header />
       <UltimoEvento />
       <Eventos />
+      <Patrocinadores />
       <ContactoUbicacion />
       <Footer />
     </>
