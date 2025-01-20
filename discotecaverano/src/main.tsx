@@ -57,7 +57,7 @@ const App: React.FC = () => {
     // Simulate loading time of at least 2 seconds
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 9000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
