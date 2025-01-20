@@ -29,3 +29,67 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo-container {
+  position: relative;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
+.logo_preloader {
+  width: 250px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  animation: shadow 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes shadow {
+
+  0%,
+  100% {
+    width: 150px;
+    opacity: 0.2;
+  }
+
+  50% {
+    width: 200px;
+    opacity: 0.5;
+  }
+}
