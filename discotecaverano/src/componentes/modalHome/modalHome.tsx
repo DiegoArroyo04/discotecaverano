@@ -52,6 +52,7 @@ export default function modalHome() {
                   <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
                 </div>
                 <div className="flip-card-back">
+                  <button className="cerrar" onClick={cerrarModal}>X</button>
                   <h3 className='eventoTitulo'>{ultimoEvento.title}</h3>
                   <p>{ultimoEvento.description}</p>
                   <p>No está permitida la venta de bebidas alcohólicas a menores de 18 años.<br />Entrada Prohibida para menores de 16 años </p>
@@ -63,10 +64,7 @@ export default function modalHome() {
                     allowFullScreen
                     className="videoIframe">
                   </iframe>
-                  <div className='botones'>
-                    <button className='botonCerrar' onClick={() => handleRedirect(`${ultimoEvento.entradas}`)}>Comprar Entradas</button>
-                    <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
-                  </div>
+                  <button className='botonComprar' onClick={() => handleRedirect(`${ultimoEvento.entradas}`)}>Comprar Entradas</button>
                 </div>
               </div>
             </div>

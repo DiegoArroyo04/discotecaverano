@@ -6,9 +6,11 @@ type Evento = {
     title: string;
     description: string;
     fecha: string;
+    fechaCorta: string;
     imageUrl: string;
     videoUrl: string;
     entradas: string;
+
 };
 
 const eventosLista: Evento[] = [
@@ -16,6 +18,7 @@ const eventosLista: Evento[] = [
         title: 'Neon Fire Festival con DJ Blaze',
         description: 'Prepárate para una noche explosiva en AURORA PARADISE con la presencia de DJ Blaze, quien encenderá la pista de baile con los mejores beats de la temporada. Sumérgete en una atmósfera electrizante con luces neón y una energía sin igual. Aprovecha nuestra oferta especial: Entrada con consumicion 10$. ¡No te pierdas esta noche inolvidable!',
         fecha: 'Viernes, 7 de Junio,A partir de las 22:00',
+        fechaCorta: 'Viernes, 7 de Junio',
         imageUrl: '../../imagenes/evento1.png',
         videoUrl: 'ZN631iYm7cM?si=XPe-MuOvTJICsccj',
         entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/saturday-night-01-02-2025-JEAV'
@@ -25,6 +28,7 @@ const eventosLista: Evento[] = [
         title: 'Retro Beats Festival con DJ Pastis',
         description: 'Vuelve al pasado con los sonidos más icónicos en la Retro Beats Festival en AURORA PARADISE. DJ Pastis te llevará en un viaje musical lleno de nostalgia y ritmos clásicos con un toque moderno. Disfruta de un ambiente lleno de luces neón vibrantes y una oferta especial: 5$ la entrada para los 50 primeros en entrar. ¡Ven a revivir los mejores momentos!',
         fecha: ' Viernes, 21 de Junio,A partir de las 22:00',
+        fechaCorta: 'Viernes, 21 de Junio',
         imageUrl: '../../imagenes/evento2.png',
         videoUrl: 'D6ypkCZvz7s?si=D8WLhvjQ_OB5v8EZ',
         entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/miercoles-teatro-barcelo-05-02-2025-MQ9O'
@@ -33,7 +37,8 @@ const eventosLista: Evento[] = [
 
         title: 'Midnight Groove Experience con DJ Groove',
         description: 'Déjate llevar por las vibraciones profundas del Midnight Groove Experience en AURORA PARADISE. DJ Groove traerá los ritmos más intensos para mantenerte bailando hasta el amanecer. Disfruta de una noche llena de energía, luces neón y buena música. No te pierdas nuestra oferta especial: Entrada gratis. ¡Ven a sentir el groove con nosotros!',
-        fecha: ' Viernes, 22 de Junio,A partir de las 23:30',
+        fecha: ' Sábado, 22 de Junio,A partir de las 23:30',
+        fechaCorta: 'Sábado, 22 de Junio',
         imageUrl: '../../imagenes/evento3.png',
         videoUrl: '-syFI6iYzuY?si=f-KyekKV9of2Petp',
         entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/perreolab--511-08-02-2025-2XXQ'
@@ -86,11 +91,10 @@ export default function eventos() {
                                 alt={evento.title}
                                 className='evento-image'
                                 onClick={() => abrirModal(evento)} />
-                            <h3 className='fechaCartel'>{evento.fecha}</h3>
+                            <h3 className='fechaCartel'>{evento.fechaCorta}</h3>
                         </div>
                     ))}
                 </div>
-
 
                 {modalAbierto && eventoSeleccionado && (
                     <div className="containerCartelGrande" onClick={cerrarModal}>
@@ -102,6 +106,7 @@ export default function eventos() {
                                         <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
                                     </div>
                                     <div className="flip-card-back">
+                                        <button className="cerrar" onClick={cerrarModal}>X</button>
                                         <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
                                         <p>{eventoSeleccionado.description}</p>
                                         <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.<br />Entrada Prohibida para menores de 16 años </p>
@@ -113,10 +118,7 @@ export default function eventos() {
                                             allowFullScreen
                                             className="videoIframe">
                                         </iframe>
-                                        <div className='botones'>
-                                            <button className='botonCerrar' onClick={() => handleRedirect(`${eventoSeleccionado.entradas}`)}>Comprar Entradas</button>
-                                            <button className='botonCerrar' onClick={cerrarModal}>Cerrar</button>
-                                        </div>
+                                        <button className='botonComprar' onClick={() => handleRedirect(`${eventoSeleccionado.entradas}`)}>Comprar Entradas</button>
 
                                     </div>
                                 </div>

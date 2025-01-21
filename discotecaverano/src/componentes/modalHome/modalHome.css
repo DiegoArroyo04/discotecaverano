@@ -130,6 +130,32 @@ p.fecha {
     text-shadow: 0 0 8px rgba(255, 0, 123, 1), 0 0 12px rgba(255, 0, 123, 1);
 }
 
+.cerrar {
+    position: absolute;
+    padding: 0.6rem;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #00FFFF;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cerrar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(11, 103, 209), 0 0 40px rgb(11, 103, 209), 0 0 60px rgb(11, 103, 209);
+}
+
+
+
 .eventoTitulo {
     color: #00FFFF;
     font-size: 1.2rem;
@@ -161,25 +187,24 @@ p.fecha {
     margin-bottom: 2%;
 }
 
-.botonCerrar {
-    width: 45%;
+.botonComprar {
+    width: 50%;
     padding: 0.6rem;
     background: #00FFFF;
     border: none;
     border-radius: 18px;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 0;
 }
 
-.botonCerrar:hover {
+.botonComprar:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgb(11, 103, 209), 0 0 40px rgb(11, 103, 209), 0 0 60px rgb(11, 103, 209);
 }
-
 
 
 /* Media Query para tablets grandes y laptops (entre 1200px y 1920px) */
@@ -215,7 +240,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
@@ -253,7 +278,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
@@ -292,7 +317,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
@@ -332,7 +357,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
@@ -371,7 +396,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
@@ -410,7 +435,7 @@ p.fecha {
         margin-bottom: 0.7rem;
     }
 
-    .botonCerrar {
+    .botonComprar {
         font-size: 0.7rem;
     }
 }
