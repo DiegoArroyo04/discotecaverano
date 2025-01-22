@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './eventos.css'
 import { Element } from 'react-scroll';
 
@@ -12,6 +12,8 @@ type Evento = {
     entradas: string;
 
 };
+
+
 
 const eventosLista: Evento[] = [
     {
@@ -130,3 +132,6 @@ export default function eventos() {
         </Element>
     )
 };
+
+
+

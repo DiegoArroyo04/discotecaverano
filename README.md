@@ -16,3 +16,4 @@ Selecciones
 npm install react-router-dom
 npm install react-scroll
 npm install --save-dev @types/react-scroll
+npm install react-intersection-observer
