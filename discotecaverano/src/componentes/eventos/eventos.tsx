@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './eventos.css'
 import { Element } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 type Evento = {
     title: string;
@@ -12,8 +13,6 @@ type Evento = {
     entradas: string;
 
 };
-
-
 
 const eventosLista: Evento[] = [
     {
@@ -48,7 +47,13 @@ const eventosLista: Evento[] = [
 ];
 
 
-export default function eventos() {
+
+function Eventos() {
+
+    const { ref: titleRef, inView: titleInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.6,
+    });
 
     // Estado para controlar la visibilidad del modal
     const [modalAbierto, setModalAbierto] = useState<boolean>(false);
@@ -85,7 +90,9 @@ export default function eventos() {
 
         <Element name="eventos">
             <div className='eventos'>
-                <h2 className='eventoEncabezado'>EVENTOS</h2>
+
+                <h2 ref={titleRef} className={`eventoEncabezado ${titleInView ? "visible" : "hidden"}`}>EVENTOS</h2>
+
                 <div className="imagenesEventos">
                     {eventosLista.map((evento, index) => (
                         <div key={index} className='evento-card'>
@@ -132,6 +139,8 @@ export default function eventos() {
         </Element>
     )
 };
+
+export default Eventos;
 
 
 

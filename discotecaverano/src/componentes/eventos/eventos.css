@@ -5,6 +5,8 @@
 }
 
 .eventoEncabezado {
+
+
     color: #00FFFF;
     font-size: 3rem;
     font-weight: bold;
@@ -17,7 +19,21 @@
 
     text-align: center;
     line-height: 1.1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 
+}
+
+
+.eventoEncabezado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.eventoEncabezado.hidden {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .imagenesEventos {

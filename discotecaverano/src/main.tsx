@@ -57,7 +57,7 @@ const App: React.FC = () => {
     // Simulate loading time of at least 2 seconds
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 9000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -90,10 +90,15 @@ const App: React.FC = () => {
 };
 
 // Renderizar la aplicación
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement); // Inicialización única
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}
+
 
 
