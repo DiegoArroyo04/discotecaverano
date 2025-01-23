@@ -20,9 +20,9 @@ npm install react-intersection-observer
 
 # FUNCIONALIDADES 
 -[] General
-  -[]Fuentes
-  -[]Paleta de colores combina
-  -[]Logos en favicon header y footer
+  -[X]Fuentes
+  -[X]Paleta de colores combina
+  -[X]Logos en favicon header y footer
   -[]Numeros de telefono y informacion redes sociales
   -[]Despliegue operativo
   -[]Añadir estadisticas Vercel
@@ -32,7 +32,7 @@ npm install react-intersection-observer
 -[X]Pop up proximo evento
   -[]Modal emergente al abrir la pagina
   -[]Cambiar estilos boton de cerrar
--[]Header
+  -[]Cambiar tamaño y textos mas breves boton mas informacion
   -[]El logo redirige a la parte de arriba
   -[]Los enlaces redirigen a su seccion correspondiente
   -[]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.

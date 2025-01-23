@@ -12,7 +12,6 @@ footer {
 
 .logoRSSS img {
     height: 12vh;
-
 }
 
 .logoRSSS img:hover {
@@ -25,6 +24,20 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+.logoRSSS a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logoRSSS a:hover {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .copy {

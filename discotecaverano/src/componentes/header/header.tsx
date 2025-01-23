@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 {/* Logo */}
                 <div className="logo">
-                    <ScrollLink to="home" smooth={true} duration={500} offset={-90} className="nav-link">
+                    <ScrollLink to="home" smooth={true} duration={1000} offset={-90} className="nav-link">
                         <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image"></img>
                     </ScrollLink>
 

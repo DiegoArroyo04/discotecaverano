@@ -1,6 +1,6 @@
 
 import './footer.css';
-
+import { Link as ScrollLink } from 'react-scroll';
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -12,7 +12,11 @@ export default function Footer() {
     return (
         <footer>
             <div className='logoRSSS'>
-                <img src="/logos/logo.png" alt="Logo" onClick={() => handleRedirect('#home')} />
+
+                <ScrollLink to="home" smooth={true} duration={1000} offset={-90}>
+                    <img src="logos/logo.png" alt="Logo Aurora Paradise"></img>
+                </ScrollLink>
+
                 <div className='rsss'>
                     <img
                         src="/logos/instagramLogo.png"
@@ -39,6 +43,7 @@ export default function Footer() {
                         onClick={() => handleRedirect('https://x.com/Dieegooo09')}
                     />
                 </div>
+                <a href="tel: 628147132">+34 628 14 71 32</a>
             </div>
             <div className='copy'>
                 <p>©2024 Aurora Paradise, Todos los derechos reservados.</p>
