@@ -17,6 +17,7 @@ npm install react-router-dom
 npm install react-scroll
 npm install --save-dev @types/react-scroll
 npm install react-intersection-observer
+npm i @vercel/analytics
 
 # FUNCIONALIDADES 
 -[] General
@@ -24,7 +25,7 @@ npm install react-intersection-observer
   -[X]Paleta de colores combina
   -[X]Logos en favicon header y footer
   -[]Numeros de telefono y informacion redes sociales
-  -[]Despliegue operativo
+  -[X]Despliegue operativo
   -[]Añadir estadisticas Vercel
 -[]Preloader
   -[X]Que entre solo cuando la seccion principal este cargada.
