@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import './modalHome.css'
-import {
-  useInView
-} from 'react-intersection-observer';
+
 
 type Evento = {
   title: string;
