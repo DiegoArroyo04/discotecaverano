@@ -445,7 +445,7 @@ p.fecha {
 
     .eventoTitulo {
         font-size: 1rem;
-        margin-bottom: 0.6rem;
+        margin: 2rem 0;
     }
 
     .flip-card-back p {
@@ -477,7 +477,6 @@ p.fecha {
 
     .cerrar {
         right: 5px;
-        top: 1px;
         width: 25px;
         height: 25px;
     }

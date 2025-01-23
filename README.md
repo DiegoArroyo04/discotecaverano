@@ -42,9 +42,9 @@ npm i @vercel/analytics
 -[X]Responsive menu hamburguesa
 -[X]Responsive redirija a las secciones y se cierre el menu
 -[]Proximos Eventos
-  -[]Lazy loading
-  -[]Revisar moviles pequeños 
--[]Compra de entradas
+  -[X]Lazy loading
+  -[X]Revisar moviles pequeños 
+-[X]Compra de entradas
 -[]Patrocinadores
   -[]Lazy loading
   -[]Revisar en movil sombreado
