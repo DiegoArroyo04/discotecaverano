@@ -389,6 +389,10 @@ p.fecha {
     .botonComprar {
         font-size: 0.7rem;
     }
+
+    .imagenGrandePopUp {
+        width: 90%;
+    }
 }
 
 /* Media Query para teléfonos medianos (entre 480px y 575px) */
@@ -427,6 +431,10 @@ p.fecha {
 
     .botonComprar {
         font-size: 0.7rem;
+    }
+
+    .imagenGrandePopUp {
+        width: 90%;
     }
 }
 

@@ -49,7 +49,7 @@ npm i @vercel/analytics
   -[X]Lazy loading
   -[X]Revisar en movil sombreado
 -[]Galeria de imagenes
-    -[]Contenedor
+    -[X]Contenedor
     -[]Imagenes Año
 -[]Ubicacion y contacto
     -[]Lazy loading
