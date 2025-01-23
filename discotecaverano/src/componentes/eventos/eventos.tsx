@@ -55,10 +55,6 @@ function Eventos() {
         threshold: 0.6,
     });
 
-    const { ref: imagenEventoRef, inView: imagenEventoInView } = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
 
     // Estado para controlar la visibilidad del modal
     const [modalAbierto, setModalAbierto] = useState<boolean>(false);
@@ -99,16 +95,30 @@ function Eventos() {
                 <h2 ref={titleRef} className={`eventoEncabezado ${titleInView ? "visible" : "hidden"}`}>EVENTOS</h2>
 
                 <div className="imagenesEventos">
-                    {eventosLista.map((evento, index) => (
-                        <div key={index} ref={imagenEventoRef} className={`evento-card ${imagenEventoInView ? "visible" : "hidden"}`}>
-                            <img src={evento.imageUrl}
-                                alt={evento.title}
-                                onClick={() => abrirModal(evento)}
-                                className='evento-image'
-                            />
-                            <h3 className='fechaCartel'>{evento.fechaCorta}</h3>
-                        </div>
-                    ))}
+                    {eventosLista.map((evento, index) => {
+
+                        //EJECUCION EN EL BUCLE PARA CADA TARJETA
+                        const { ref: referenciaTarjetaEvento, inView: inViewTarjetaEvento } = useInView({
+                            triggerOnce: false,
+                            threshold: 0.3,
+                        });
+
+                        return (
+                            <div
+                                key={index}
+                                ref={referenciaTarjetaEvento}
+                                className={`evento-card ${inViewTarjetaEvento ? "visible" : "hidden"}`}
+                            >
+                                <img
+                                    src={evento.imageUrl}
+                                    alt={evento.title}
+                                    onClick={() => abrirModal(evento)}
+                                    className="evento-image"
+                                />
+                                <h3 className="fechaCartel">{evento.fechaCorta}</h3>
+                            </div>
+                        );
+                    })}
                 </div>
 
                 {modalAbierto && eventoSeleccionado && (
