@@ -10,7 +10,6 @@
         0px 0px 30px rgb(11, 103, 209);
     text-align: center;
     line-height: 1.1;
-    margin-bottom: 2rem;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -27,6 +26,7 @@
 
 /* Contenedor Principal */
 .galeriaDeImagenesContainer {
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,6 @@
     align-items: center;
     width: 100%;
     position: relative;
-    /* Necesario para posicionar las tarjetas como un puzzle */
 }
 
 /* Estilo de Tarjetas */
@@ -49,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 550px;
     background-size: cover;
     background-position: center;
     transition:
@@ -60,20 +59,17 @@
     width: 100%;
 }
 
-
-
 .tarjetaAnio h3 {
     font-size: 2rem;
     font-weight: bold;
     z-index: 1;
-    color: rgb(173 243 0);
+    color: white;
     text-shadow:
         0 0 4px rgb(11, 103, 209),
         0 0 8px rgb(11, 103, 209),
         0px 0px 12px rgb(11, 103, 209),
         0px 0px 20px rgb(11, 103, 209),
         0px 0px 30px rgb(11, 103, 209);
-
 }
 
 .anio2023 {
@@ -84,8 +80,7 @@
 }
 
 .anio2024 {
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
     background: url('../../../imagenes/2024.png') no-repeat center center / cover;
     margin-right: -100px;
     z-index: 2;
@@ -98,14 +93,32 @@
     z-index: 1;
 }
 
-/* Hover Animations */
+
+/* Agregar un pseudo-elemento que cubrirá el fondo con opacidad cuando se hace hover */
+.tarjetaAnio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tarjetaAnio:hover::before {
+    opacity: 1;
+
+}
+
 .tarjetaAnio:hover {
     transform: scale(1.05);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 10;
+
+
 }
-
-
 
 /* Botón */
 .galeriaImagenes button {
@@ -116,37 +129,33 @@
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: bold;
-    color: white;
-    background: rgba(0, 255, 255, 0.8);
+    color: #FFFFFF;
+    background: linear-gradient(to right, rgba(0, 123, 255, 1), rgba(255, 0, 123, 1));
     border: none;
-    border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s ease, background 0.3s ease;
-}
-
-.galeriaImagenes button:hover {
-    background: rgba(0, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5), 0 6px 18px rgba(255, 0, 123, 0.4);
+    transition: opacity 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
 
 .tarjetaAnio:hover button {
     opacity: 1;
+
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .galeriaImagenes {
         flex-direction: column;
-        /* Cambia a columna en pantallas pequeñas */
+
     }
 
     .tarjetaAnio {
         width: 100%;
-        /* Cada tarjeta ocupa el ancho completo */
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        /* Sin diagonales en móviles */
         margin-right: 0;
+        height: 170px;
     }
 }
