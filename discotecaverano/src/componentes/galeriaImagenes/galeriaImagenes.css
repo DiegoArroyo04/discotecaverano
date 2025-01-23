@@ -1,0 +1,152 @@
+.tituloGaleria {
+    color: #00FFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow:
+        0 0 4px rgb(11, 103, 209),
+        0 0 8px rgb(11, 103, 209),
+        0px 0px 12px rgb(11, 103, 209),
+        0px 0px 20px rgb(11, 103, 209),
+        0px 0px 30px rgb(11, 103, 209);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.tituloGaleria.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloGaleria.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* Contenedor Principal */
+.galeriaDeImagenesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contenedor de Galería */
+.galeriaImagenes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    /* Necesario para posicionar las tarjetas como un puzzle */
+}
+
+/* Estilo de Tarjetas */
+.tarjetaAnio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition:
+        transform 0.4s ease,
+        clip-path 0.4s ease,
+        box-shadow 0.4s ease,
+        z-index 0.4s ease;
+    width: 100%;
+}
+
+
+
+.tarjetaAnio h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1;
+    color: rgb(173 243 0);
+    text-shadow:
+        0 0 4px rgb(11, 103, 209),
+        0 0 8px rgb(11, 103, 209),
+        0px 0px 12px rgb(11, 103, 209),
+        0px 0px 20px rgb(11, 103, 209),
+        0px 0px 30px rgb(11, 103, 209);
+
+}
+
+.anio2023 {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    background: url('../../../imagenes/2023.png') no-repeat center center / cover;
+    margin-right: -100px;
+    z-index: 3;
+}
+
+.anio2024 {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    background: url('../../../imagenes/2024.png') no-repeat center center / cover;
+    margin-right: -100px;
+    z-index: 2;
+}
+
+.anio2025 {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    background: url('../../../imagenes/2025.png') no-repeat center center / cover;
+    /* Ajusta para eliminar el hueco con la tarjeta superior */
+    z-index: 1;
+}
+
+/* Hover Animations */
+.tarjetaAnio:hover {
+    transform: scale(1.05);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 10;
+}
+
+
+
+/* Botón */
+.galeriaImagenes button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 255, 255, 0.8);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.galeriaImagenes button:hover {
+    background: rgba(0, 255, 255, 1);
+}
+
+
+.tarjetaAnio:hover button {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .galeriaImagenes {
+        flex-direction: column;
+        /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .tarjetaAnio {
+        width: 100%;
+        /* Cada tarjeta ocupa el ancho completo */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        /* Sin diagonales en móviles */
+        margin-right: 0;
+    }
+}

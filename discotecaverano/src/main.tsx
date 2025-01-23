@@ -11,6 +11,9 @@ import ContactoUbicacion from './componentes/contactoUbicacion/contactoUbicacion
 import Eventos from './componentes/eventos/eventos.tsx'
 import UltimoEvento from './componentes/modalHome/modalHome.tsx'
 import Patrocinadores from './componentes/patrocinadores/patrocinadores.tsx';
+import GaleriaImagenes from './componentes/galeriaImagenes/galeriaImagenes.tsx';
+
+
 
 const Preloader: React.FC = () => {
   return (
@@ -39,6 +42,7 @@ const Home: React.FC = () => {
       <Header />
       <UltimoEvento />
       <Eventos />
+      <GaleriaImagenes />
       <Patrocinadores />
       <ContactoUbicacion />
       <Footer />
