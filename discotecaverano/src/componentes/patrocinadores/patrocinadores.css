@@ -16,16 +16,41 @@
     text-align: center;
     line-height: 1.1;
     margin-bottom: 2rem;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+.tituloPatrocinadores.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloPatrocinadores.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 
 .patrocinadoresGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2%;
+    gap: 20px;
     justify-items: center;
     align-items: center;
     margin: 4% 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+.patrocinadoresGrid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.patrocinadoresGrid.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 
 
 .logoBarcelo,

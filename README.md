@@ -45,9 +45,9 @@ npm i @vercel/analytics
   -[X]Lazy loading
   -[X]Revisar moviles pequeños 
 -[X]Compra de entradas
--[]Patrocinadores
-  -[]Lazy loading
-  -[]Revisar en movil sombreado
+-[X]Patrocinadores
+  -[X]Lazy loading
+  -[X]Revisar en movil sombreado
 -[]Galeria de imagenes
     -[]Contenedor
     -[]Imagenes Año

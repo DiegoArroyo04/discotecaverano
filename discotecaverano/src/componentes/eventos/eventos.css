@@ -90,14 +90,11 @@
     font-weight: bold;
     text-shadow:
         0 0 4px rgba(243, 5, 124, 0.7),
-        0 0 8px rgba(250, 83, 160, 0.7),
-        0 0 12px rgba(243, 5, 124, 0.7),
         0 0 16px rgba(250, 83, 160, 0.7),
         0 0 20px rgba(243, 5, 124, 0.7);
-
     text-align: center;
     line-height: 1.1;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
 
 /* Animación de Pop-up para el modal */
