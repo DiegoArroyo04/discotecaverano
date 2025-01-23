@@ -34,14 +34,13 @@ npm i @vercel/analytics
   -[X]Modal emergente al abrir la pagina
   -[X]Cambiar estilos boton de cerrar
   -[X]Cambiar tamaño y textos mas breves boton mas informacion
-  -[]Responsive moviles muy pequeños
-
--[]El logo redirige a la parte de arriba
+  -[X]Responsive moviles muy pequeños
+-[X]El logo redirige a la parte de arriba
 -[]Los enlaces redirigen a su seccion correspondiente
--[]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.
--[]Al hacer hover subrayar enlaces
--[]Responsive menu hamburguesa
--[]Responsive redirija a las secciones y se cierre el menu
+-[X]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.
+-[X]Al hacer hover subrayar enlaces
+-[X]Responsive menu hamburguesa
+-[X]Responsive redirija a las secciones y se cierre el menu
 -[]Proximos Eventos
   -[]Lazy loading
   -[]Revisar moviles pequeños 

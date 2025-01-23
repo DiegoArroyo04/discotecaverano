@@ -53,7 +53,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+.evento-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.evento-card.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 
 .evento-image {
     width: 50%;
@@ -61,9 +75,8 @@
     object-fit: cover;
     border-radius: 18px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    /* Borde llamativo */
 }
+
 
 .evento-image:hover {
     transform: scale(1.05);

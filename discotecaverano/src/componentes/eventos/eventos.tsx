@@ -55,6 +55,11 @@ function Eventos() {
         threshold: 0.6,
     });
 
+    const { ref: imagenEventoRef, inView: imagenEventoInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
     // Estado para controlar la visibilidad del modal
     const [modalAbierto, setModalAbierto] = useState<boolean>(false);
     // Estado para manejar si la tarjeta está girada
@@ -95,11 +100,12 @@ function Eventos() {
 
                 <div className="imagenesEventos">
                     {eventosLista.map((evento, index) => (
-                        <div key={index} className='evento-card'>
+                        <div key={index} ref={imagenEventoRef} className={`evento-card ${imagenEventoInView ? "visible" : "hidden"}`}>
                             <img src={evento.imageUrl}
                                 alt={evento.title}
+                                onClick={() => abrirModal(evento)}
                                 className='evento-image'
-                                onClick={() => abrirModal(evento)} />
+                            />
                             <h3 className='fechaCartel'>{evento.fechaCorta}</h3>
                         </div>
                     ))}
