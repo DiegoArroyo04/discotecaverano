@@ -26,20 +26,22 @@ npm i @vercel/analytics
   -[X]Logos en favicon header y footer
   -[]Numeros de telefono y informacion redes sociales
   -[X]Despliegue operativo
-  -[]Añadir estadisticas Vercel
--[]Preloader
+  -[X]Añadir estadisticas Vercel
+-[X]Preloader
   -[X]Que entre solo cuando la seccion principal este cargada.
-  -[]Utilizar el icono definitivo
+  -[X]Utilizar el icono definitivo
 -[X]Pop up proximo evento
-  -[]Modal emergente al abrir la pagina
-  -[]Cambiar estilos boton de cerrar
-  -[]Cambiar tamaño y textos mas breves boton mas informacion
-  -[]El logo redirige a la parte de arriba
-  -[]Los enlaces redirigen a su seccion correspondiente
-  -[]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.
-  -[]Al hacer hover subrayar enlaces
-  -[]Responsive menu hamburguesa
-  -[]Responsive redirija a las secciones y se cierre el menu
+  -[X]Modal emergente al abrir la pagina
+  -[X]Cambiar estilos boton de cerrar
+  -[X]Cambiar tamaño y textos mas breves boton mas informacion
+  -[]Responsive moviles muy pequeños
+
+-[]El logo redirige a la parte de arriba
+-[]Los enlaces redirigen a su seccion correspondiente
+-[]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.
+-[]Al hacer hover subrayar enlaces
+-[]Responsive menu hamburguesa
+-[]Responsive redirija a las secciones y se cierre el menu
 -[]Proximos Eventos
   -[]Lazy loading
   -[]Revisar moviles pequeños 

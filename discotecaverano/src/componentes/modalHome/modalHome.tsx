@@ -19,7 +19,7 @@ const ultimoEvento: Evento = {
   videoUrl: 'ZN631iYm7cM?si=XPe-MuOvTJICsccj',
   entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/saturday-night-01-02-2025-JEAV'
 }
-export default function modalHome() {
+export default function ModalHome() {
 
   // Estado para controlar la visibilidad del modal
   const [modalAbierto, setModalAbierto] = useState<boolean>(true);
@@ -50,8 +50,8 @@ export default function modalHome() {
             <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
               <div className="flip-card-inner">
                 <div className="popUpDelante">
-                  <img src={ultimoEvento.imageUrl} alt={ultimoEvento.title} className="imagenGrande" />
-                  <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
+                  <img src={ultimoEvento.imageUrl} alt={ultimoEvento.title} className="imagenGrandePopUp" />
+                  <button className='botonPopUp' onClick={girarTarjeta}>MÁS INFORMACIÓN</button>
                 </div>
                 <div className="flip-card-back">
                   <button className="cerrar" onClick={cerrarModal}>X</button>

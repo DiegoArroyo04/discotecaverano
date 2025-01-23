@@ -94,6 +94,35 @@
 }
 
 
+.imagenGrandePopUp {
+    width: 100%;
+    height: 70%;
+    margin-bottom: 4%;
+    object-fit: fill;
+    border-radius: 18px;
+}
+
+.botonbotonPopUp {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: linear-gradient(to right, rgba(0, 123, 255, 1), rgba(255, 0, 123, 1));
+    border: none;
+    border-radius: 18px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 1), 0 0 20px rgba(255, 0, 123, 1);
+
+}
+
+
 .flip-card-back {
     background: linear-gradient(to top, rgba(0, 123, 255, 1), rgba(255, 0, 123, 1));
     color: white;
@@ -412,12 +441,11 @@ p.fecha {
 
     .flip-card-back {
         padding: 1%;
-
     }
 
     .eventoTitulo {
         font-size: 1rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.6rem;
     }
 
     .flip-card-back p {
@@ -438,4 +466,18 @@ p.fecha {
     .botonComprar {
         font-size: 0.7rem;
     }
+
+    .imagenGrandePopUp {
+        width: 90%;
+    }
+
+    .flip-card-inner {
+        width: 80%;
+    }
+
+    .cerrar {
+        width: 25px;
+        height: 25px;
+    }
+
 }
