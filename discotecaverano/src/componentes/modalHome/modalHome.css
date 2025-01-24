@@ -396,6 +396,9 @@ p.fecha {
         align-items: center;
     }
 
+    .imagenGrandePopUp {
+        width: 90%;
+    }
 
 }
 
@@ -441,6 +444,10 @@ p.fecha {
         width: 80%;
         justify-content: center;
         align-items: center;
+    }
+
+    .imagenGrandePopUp {
+        width: 90%;
     }
 
 
