@@ -455,6 +455,9 @@ p.fecha {
 
     .flip-card-inner {
         width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
