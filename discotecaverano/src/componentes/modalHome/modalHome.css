@@ -453,6 +453,9 @@ p.fecha {
         font-size: 0.7rem;
     }
 
+    .flip-card-inner {
+        width: 80%;
+    }
 
     .imagenGrandePopUp {
         width: 90%;
