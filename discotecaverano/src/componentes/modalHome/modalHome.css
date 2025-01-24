@@ -58,9 +58,7 @@
     padding: 0;
 }
 
-.cartelGrande {
-    border: 2px solid red;
-}
+
 
 .flip-card {
     background-color: transparent;
@@ -82,6 +80,11 @@
     align-items: center;
     justify-content: center;
 
+}
+
+
+.flip-card-inner {
+    border: 2px solid red;
 }
 
 .flip-card.flipped .flip-card-inner {
