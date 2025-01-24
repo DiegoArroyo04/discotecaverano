@@ -47,6 +47,8 @@
 }
 
 
+
+
 .evento-card {
     width: 100%;
     display: flex;
@@ -361,6 +363,23 @@ p.fecha {
 
     /* Dispositivos: Laptops pequeñas, tablets en orientación vertical */
 
+    /* Centrar el último elemento si queda solo en una fila */
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        /* Hace que el elemento ocupe toda la fila */
+        width: 100%;
+        align-self: center;
+
+    }
+
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) .evento-image {
+        width: 25%;
+        /* Tamaño reducido solo para este caso */
+        height: 25%;
+        /* Mantén la proporción */
+        object-fit: cover;
+    }
+
 
     .flip-card-back {
         padding: 1%;
@@ -392,8 +411,15 @@ p.fecha {
     }
 }
 
+
 /* Media Query para tablets pequeñas y phablets (entre 768px y 991px) */
 @media (max-width: 768px) {
+
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) .evento-image {
+        width: 25%;
+        height: 25%;
+        object-fit: cover;
+    }
 
     /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
 
@@ -429,6 +455,12 @@ p.fecha {
 
 /* Media Query para teléfonos grandes (entre 576px y 767px) */
 @media (max-width: 576px) {
+
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) .evento-image {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
 
     /* Dispositivos: Smartphones grandes (iPhone Plus, Galaxy S series) */
     /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
@@ -469,6 +501,12 @@ p.fecha {
     /* Dispositivos: Smartphones medianos (iPhone, Pixel) */
     /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
 
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) .evento-image {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
     .flip-card-back {
         padding: 1%;
         width: 70%;
@@ -504,6 +542,12 @@ p.fecha {
 
     /* Dispositivos: Smartphones pequeños (iPhone SE, teléfonos básicos Android) */
     /* Dispositivos: Laptops grandes, tablets en orientación horizontal */
+
+    .imagenesEventos>.evento-card:last-child:nth-child(odd) .evento-image {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
 
     .flip-card-back {
         padding: 1%;

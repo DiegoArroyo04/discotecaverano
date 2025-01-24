@@ -12,6 +12,7 @@ import Eventos from './componentes/eventos/eventos.tsx'
 import UltimoEvento from './componentes/modalHome/modalHome.tsx'
 import Patrocinadores from './componentes/patrocinadores/patrocinadores.tsx';
 import GaleriaImagenes from './componentes/galeriaImagenes/galeriaImagenes.tsx';
+import Galeria2023 from './componentes/galeriaImagenes/2023/galeria2023.tsx'
 
 
 
@@ -76,6 +77,9 @@ const App: React.FC = () => {
         <Routes>
           {/*HOME*/}
           <Route path="/" element={<Home />} />
+
+          {/*GALERIA 2023*/}
+          <Route path="/galeria2023" element={<Galeria2023 />} />
 
           {/*AVISO LEGAL*/}
           <Route path="/avisoLegal" element={<AvisoLegal />} />

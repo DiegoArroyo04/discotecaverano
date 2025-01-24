@@ -43,7 +43,8 @@ npm i @vercel/analytics
 -[X]Responsive redirija a las secciones y se cierre el menu
 -[]Proximos Eventos
   -[X]Lazy loading
-  -[X]Revisar moviles pequeños 
+  -[X]Revisar moviles pequeños
+  -[X]Centrar Evento en tablets
 -[X]Compra de entradas
 -[X]Patrocinadores
   -[X]Lazy loading
@@ -51,6 +52,8 @@ npm i @vercel/analytics
 -[]Galeria de imagenes
     -[X]Contenedor
     -[]Imagenes Año
+    -[]Redireccion menus
+    -[]Lazy Loading
 -[]Ubicacion y contacto
     -[]Lazy loading
     -[]Mapa
