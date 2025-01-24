@@ -392,7 +392,11 @@ p.fecha {
         font-size: 0.7rem;
     }
 
-
+    .flip-card-inner {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
 
     .imagenGrandePopUp {
         width: 90%;
@@ -438,11 +442,6 @@ p.fecha {
         font-size: 0.7rem;
     }
 
-    .flip-card-inner {
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-    }
 
     .imagenGrandePopUp {
         width: 90%;
