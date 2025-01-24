@@ -83,10 +83,6 @@
 }
 
 
-.flip-card-inner {
-    border: 2px solid red;
-}
-
 .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
@@ -454,7 +450,7 @@ p.fecha {
     }
 
     .flip-card-inner {
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
