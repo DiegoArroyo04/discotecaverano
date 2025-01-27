@@ -18,8 +18,11 @@ const ultimoEvento: Evento = {
   imageUrl: '../../imagenes/evento1.png',
   videoUrl: 'ZN631iYm7cM?si=XPe-MuOvTJICsccj',
   entradas: 'https://www.fourvenues.com/es/discotecas-madrid/events/saturday-night-01-02-2025-JEAV'
+
 }
+
 export default function ModalHome() {
+
 
   // Estado para controlar la visibilidad del modal
   const [modalAbierto, setModalAbierto] = useState<boolean>(true);

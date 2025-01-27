@@ -18,6 +18,7 @@ npm install react-scroll
 npm install --save-dev @types/react-scroll
 npm install react-intersection-observer
 npm i @vercel/analytics
+npm install react-icons
 
 # FUNCIONALIDADES 
 -[] General
@@ -49,6 +50,8 @@ npm i @vercel/analytics
 -[X]Patrocinadores
   -[X]Lazy loading
   -[X]Revisar en movil sombreado
+-[]Banner Cookies
+-[]Header video y textos
 -[]Galeria de imagenes
     -[X]Contenedor
     -[]Imagenes Año
@@ -68,6 +71,7 @@ npm i @vercel/analytics
   -[]Privacidad
   -[]Aviso Legal
   -[]Cookies
+  -[]Modificar css
 -[]Banner cookies y cookies
   -[]Aparece el banner de cookies al entrar en la web
   -[]El banner de cookies tiene el formato correcto
