@@ -1,0 +1,86 @@
+.tituloGaleria {
+    color: #00FFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow:
+        0 0 4px rgb(11, 103, 209),
+        0 0 8px rgb(11, 103, 209),
+        0px 0px 12px rgb(11, 103, 209),
+        0px 0px 20px rgb(11, 103, 209),
+        0px 0px 30px rgb(11, 103, 209);
+    text-align: center;
+    line-height: 1.1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.tituloGaleria.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloGaleria.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.galeria {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas en pantallas grandes */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    /* Limita el ancho máximo para no hacerlo demasiado grande */
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Asegura que las imágenes no se deformen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05);
+    /* Zoom en hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra más intensa */
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas medianas */
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        /* 1 columna en pantallas pequeñas */
+    }
+
+    .tituloGaleria {
+        font-size: 2rem;
+        /* Reducir tamaño del título en pantallas pequeñas */
+    }
+}

@@ -51,7 +51,7 @@ npm install react-icons
   -[X]Lazy loading
   -[X]Revisar en movil sombreado
 -[]Banner Cookies
--[]Header video y textos
+-[X]Header video y textos
 -[]Galeria de imagenes
     -[X]Contenedor
     -[]Imagenes Año

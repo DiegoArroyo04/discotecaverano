@@ -12,7 +12,10 @@ import Eventos from './componentes/eventos/eventos.tsx'
 import UltimoEvento from './componentes/modalHome/modalHome.tsx'
 import Patrocinadores from './componentes/patrocinadores/patrocinadores.tsx';
 import GaleriaImagenes from './componentes/galeriaImagenes/galeriaImagenes.tsx';
-import Galeria2023 from './componentes/galeriaImagenes/2023/galeria2023.tsx'
+import Galeria2023 from './componentes/galeriaImagenes/galeria2023.tsx'
+import Galeria2024 from './componentes/galeriaImagenes/galeria2024.tsx'
+import Galeria2025 from './componentes/galeriaImagenes/galeria2025.tsx'
+
 
 
 
@@ -80,6 +83,12 @@ const App: React.FC = () => {
 
           {/*GALERIA 2023*/}
           <Route path="/galeria2023" element={<Galeria2023 />} />
+
+          {/*GALERIA 2024*/}
+          <Route path="/galeria2024" element={<Galeria2024 />} />
+
+          {/*GALERIA 2025*/}
+          <Route path="/galeria2025" element={<Galeria2025 />} />
 
           {/*AVISO LEGAL*/}
           <Route path="/avisoLegal" element={<AvisoLegal />} />
