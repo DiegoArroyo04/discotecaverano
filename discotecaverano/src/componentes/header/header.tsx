@@ -6,6 +6,14 @@ import './header.css'
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [textoActual, setTextoActual] = useState(0);
+    const [esVisible, setEsVisible] = useState(true);
+
+    const textos = [
+        "AURORA PARADISE",
+        "DESDE 1990 SIENDO LA MAYOR DISCOTECA DE VERANO Y REFERENCIA DE LA ZONA",
+    ];
+
 
     // Detectar el scroll
     const handleScroll = () => {
@@ -15,6 +23,26 @@ const Header: React.FC = () => {
             setScrolled(false);
         }
     };
+
+    // Alternar visibilidad y textos en el ciclo
+    useEffect(() => {
+        let step = 0; // Controla los 3 estados: mostrar texto 1, ocultar, mostrar texto 2
+        const interval = setInterval(() => {
+            if (step === 0) {
+                setEsVisible(true); // Mostrar texto 1
+                setTextoActual(0);
+            } else if (step === 1) {
+                setEsVisible(false); // Esconder texto
+            } else if (step === 2) {
+                setEsVisible(true); // Mostrar texto 2
+                setTextoActual(1);
+            }
+            step = (step + 1) % 3; // Ciclo entre 0, 1, 2
+        }, 5000); // Cada paso dura 5 segundos
+
+        return () => clearInterval(interval);
+    }, []);
+
 
     // Hook para agregar el evento de scroll
     useEffect(() => {
@@ -68,7 +96,16 @@ const Header: React.FC = () => {
 
             {/* Hero */}
             <div className="hero">
-                <h1 className="hero-text">DESDE 1990 SIENDO LA MAYOR DISCOTECA DE VERANO Y REFERENCIA DE LA ZONA</h1>
+                <video
+                    className="hero-video"
+                    src="/videos/videoHeader.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+                {/* Mostrar el texto solo si `isVisible` es true */}
+                {esVisible && <h1 className="hero-text">{textos[textoActual]}</h1>}
             </div >
         </Element>
         </>
