@@ -10,20 +10,19 @@ export default function GaleriaImagenes() {
             <div className='galeriaImagenes'>
                 <div className='tarjetaAnio anio2023'>
                     <h3>2023</h3>
-                    <Link to="/galeria2023">
+                    <Link to="/galeria2023#galeria2023">
                         <button>Ver Recuerdos</button>
                     </Link>
-
                 </div>
                 <div className='tarjetaAnio anio2024'>
                     <h3>2024</h3>
-                    <Link to="/galeria2024">
+                    <Link to="/galeria2024#galeria2024">
                         <button>Ver Recuerdos</button>
                     </Link>
                 </div>
                 <div className='tarjetaAnio anio2025'>
                     <h3>2025</h3>
-                    <Link to="/galeria2025">
+                    <Link to="/galeria2025#galeria2025">
                         <button>Ver Recuerdos</button>
                     </Link>
                 </div>

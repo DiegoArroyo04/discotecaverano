@@ -10,6 +10,7 @@ const Header: React.FC = () => {
     const [textoActual, setTextoActual] = useState(0);
     const [esVisible, setEsVisible] = useState(true);
 
+
     const textos = [
         "AURORA PARADISE",
         "DESDE 1990 SIENDO LA MAYOR DISCOTECA DE VERANO Y REFERENCIA DE LA ZONA",
@@ -29,14 +30,22 @@ const Header: React.FC = () => {
     useEffect(() => {
         let step = 0; // Controla los 3 estados: mostrar texto 1, ocultar, mostrar texto 2
         const interval = setInterval(() => {
+
+
+
             if (step === 0) {
-                setEsVisible(true); // Mostrar texto 1
+
                 setTextoActual(0);
+                setEsVisible(true); // Mostrar texto 2
+
+
             } else if (step === 1) {
                 setEsVisible(false); // Esconder texto
             } else if (step === 2) {
-                setEsVisible(true); // Mostrar texto 2
+
                 setTextoActual(1);
+                setEsVisible(true); // Mostrar texto 2
+
             }
             step = (step + 1) % 3; // Ciclo entre 0, 1, 2
         }, 5000); // Cada paso dura 5 segundos

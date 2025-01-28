@@ -50,9 +50,9 @@ npm install react-icons
 -[X]Patrocinadores
   -[X]Lazy loading
   -[X]Revisar en movil sombreado
--[]Banner Cookies
+-[X]Banner Cookies
 -[X]Header video y textos
--[]Mas sombraa textos
+-[X]Mas sombras textos
 -[]Galeria de imagenes
     -[X]Contenedor
     -[]Imagenes Año
