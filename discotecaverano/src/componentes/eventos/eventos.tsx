@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './eventos.css'
 import { Element } from 'react-scroll';
-import { scroller } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 
 type Evento = {
