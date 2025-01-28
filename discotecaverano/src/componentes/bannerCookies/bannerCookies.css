@@ -1,0 +1,151 @@
+.cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(255, 0, 123, 0.9));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1s ease-out;
+}
+
+.cookieBanner .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.cookieBanner .texto {
+    font-size: 1rem;
+    text-align: center;
+    margin: 15px;
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+.cookieButtons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.cookieButton {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 0, 123, 0.9);
+    color: white;
+    width: 150px;
+
+}
+
+.cookieButton:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    background: rgba(255, 0, 123, 1);
+}
+
+.cookieButton.rechazar {
+    background: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 123, 255, 1);
+}
+
+.cookieButton.rechazar:hover {
+    background: rgba(255, 255, 255, 0.9);
+
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Reglas Responsive */
+
+/* Pantallas pequeñas (smartphones, menos de 768px) */
+@media (max-width: 767px) {
+    .cookieBanner {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+
+    .cookieBanner .titulo {
+        font-size: 1.2rem;
+    }
+
+    .cookieBanner .texto {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .cookieButton {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas medianas (tabletas, entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cookieBanner {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .cookieBanner .titulo {
+        font-size: 1.4rem;
+    }
+
+    .cookieBanner .texto {
+        font-size: 1rem;
+    }
+
+    .cookieButton {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes (más de 1024px) */
+@media (min-width: 1024px) {
+    .cookieBanner {
+        padding: 25px 0;
+    }
+
+    .cookieBanner .titulo {
+        font-size: 1.6rem;
+    }
+
+    .cookieBanner .texto {
+        font-size: 1.2rem;
+    }
+
+    .cookieButton {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+    }
+}

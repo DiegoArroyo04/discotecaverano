@@ -15,6 +15,7 @@ import GaleriaImagenes from './componentes/galeriaImagenes/galeriaImagenes.tsx';
 import Galeria2023 from './componentes/galeriaImagenes/galeria2023.tsx'
 import Galeria2024 from './componentes/galeriaImagenes/galeria2024.tsx'
 import Galeria2025 from './componentes/galeriaImagenes/galeria2025.tsx'
+import BannerCookies from './componentes/bannerCookies/bannerCookies.tsx'
 
 
 
@@ -50,6 +51,7 @@ const Home: React.FC = () => {
       <Patrocinadores />
       <ContactoUbicacion />
       <Footer />
+      <BannerCookies />
     </>
 
   );

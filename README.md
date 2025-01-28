@@ -52,6 +52,7 @@ npm install react-icons
   -[X]Revisar en movil sombreado
 -[]Banner Cookies
 -[X]Header video y textos
+-[]Mas sombraa textos
 -[]Galeria de imagenes
     -[X]Contenedor
     -[]Imagenes Año
