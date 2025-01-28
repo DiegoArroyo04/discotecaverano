@@ -11,7 +11,6 @@ export default function BannerCookies() {
         setVisible(false);
         localStorage.setItem('cookiesAceptadas', 'true');
 
-
         // Obtener la ubicación del usuario
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
@@ -50,7 +49,8 @@ export default function BannerCookies() {
             <div>
                 <div className="cookieBanner">
                     <p className='titulo'>🍪 Este sitio web utiliza cookies para mejorar su experiencia 🍪</p>
-                    <p className='texto'>Usamos cookies para mejorar la experiencia del usuario ¿Aceptas el uso de cookies?</p>
+                    <p className='texto'> Usamos cookies para mejorar la experiencia del usuario, realizar análisis estadísticos y
+                        obtener la ubicación de los usuarios con fines de personalización.<br /> ¿Aceptas el uso de cookies?</p>
                     <div className='cookieButtons'>
                         <button className="cookieButton" onClick={aceptarCookies}>Aceptar</button>
                         <button className="cookieButton rechazar" onClick={rechazarCookies}>Rechazar</button>
