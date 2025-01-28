@@ -18,8 +18,6 @@ import Galeria2025 from './componentes/galeriaImagenes/galeria2025.tsx'
 import BannerCookies from './componentes/bannerCookies/bannerCookies.tsx'
 
 
-
-
 const Preloader: React.FC = () => {
   return (
     <div className="preloader">

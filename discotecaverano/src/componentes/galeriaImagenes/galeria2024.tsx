@@ -4,8 +4,12 @@ import Footer from '../footer/footer';
 import { scroller } from 'react-scroll';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
+import { FiArrowLeft } from "react-icons/fi"; // Icono de "volver atrás"
 
 export default function Galeria2024() {
+    const handleGoBack = () => {
+        window.history.back(); // Regresa a la página anterior
+    };
 
     useEffect(() => {
         const hash = window.location.hash.slice(1); // Remueve el "#" del fragmento
@@ -84,9 +88,12 @@ export default function Galeria2024() {
                     </div>
                 </div>
             </Element>
-
-
             <Footer />
+            {/* Botón para volver atrás */}
+            <button className="go-back-btn" onClick={handleGoBack}>
+                <FiArrowLeft size={20} style={{ marginRight: "8px" }} />
+                Volver
+            </button>
         </div>
     )
 }

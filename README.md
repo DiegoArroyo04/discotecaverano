@@ -55,9 +55,11 @@ npm install react-icons
 -[X]Mas sombras textos
 -[]Galeria de imagenes
     -[X]Contenedor
-    -[]Imagenes Año
+    -[X]Imagenes Año
+    -[]Preevisualizador de imagenes
     -[]Redireccion menus
     -[]Lazy Loading
+    -[X]Boton de volver
 -[]Ubicacion y contacto
     -[]Lazy loading
     -[]Mapa

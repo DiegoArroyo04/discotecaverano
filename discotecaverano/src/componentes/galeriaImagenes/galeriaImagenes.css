@@ -139,6 +139,11 @@
     transition: opacity 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
+.galeriaImagenes button:hover {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 1), 0 0 20px rgba(255, 0, 123, 1);
+}
+
+
 
 .tarjetaAnio:hover button {
     opacity: 1;
