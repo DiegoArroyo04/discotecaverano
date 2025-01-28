@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from "react-router-dom";
 import { Element } from 'react-scroll';
 import './header.css'
 
@@ -65,7 +66,9 @@ const Header: React.FC = () => {
                 {/* Logo */}
                 <div className="logo">
                     <ScrollLink to="home" smooth={true} duration={1000} offset={-90} className="nav-link">
-                        <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image"></img>
+                        <Link to="/">
+                            <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image"></img>
+                        </Link>
                     </ScrollLink>
 
                 </div>

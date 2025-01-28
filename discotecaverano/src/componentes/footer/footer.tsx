@@ -14,7 +14,10 @@ export default function Footer() {
             <div className='logoRSSS'>
 
                 <ScrollLink to="home" smooth={true} duration={1000} offset={-90}>
-                    <img src="logos/logo.png" alt="Logo Aurora Paradise"></img>
+                    <Link to="/">
+                        <img src="logos/logo.png" alt="Logo Aurora Paradise"></img>
+                    </Link>
+
                 </ScrollLink>
 
                 <div className='rsss'>
