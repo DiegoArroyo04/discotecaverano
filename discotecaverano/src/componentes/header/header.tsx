@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from "react-router-dom";
 import { Element } from 'react-scroll';
 import './header.css'
 
@@ -68,20 +69,28 @@ const Header: React.FC = () => {
 
 
 
+
+
     return (
         <>  <Element name="home">
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 {/* Logo */}
                 <div className="logo">
                     <ScrollLink to="home" smooth={true} duration={1000} offset={-90} className="nav-link">
-                        <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image"></img>
+                        <Link to="/">
+                            <img src="logos/logo.png" alt="Logo Aurora Paradise" className="logo-image"></img>
+                        </Link>
                     </ScrollLink>
 
                 </div>
 
                 {/* Navigation */}
                 <nav className="nav">
-                    <ScrollLink to="eventos" smooth={true} duration={500} offset={-90} className="nav-link">Eventos</ScrollLink>
+                    <ScrollLink to="eventos" smooth={true} duration={500} offset={-90} className="nav-link">
+                        <Link className="nav-link" to="/">
+                            Eventos
+                        </Link>
+                    </ScrollLink>
                     <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-link">Entradas</a>
                     <a href="#gallery" className="nav-link">Galería</a>
                     <a href="#contact" className="nav-link">Contacto</a>

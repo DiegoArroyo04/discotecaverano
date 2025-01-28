@@ -5,6 +5,7 @@ import { scroller } from 'react-scroll';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
 import { FiArrowLeft } from "react-icons/fi"; // Icono de "volver atrás"
+import { Link } from "react-router-dom";
 
 export default function Galeria2024() {
     const handleGoBack = () => {
@@ -90,10 +91,12 @@ export default function Galeria2024() {
             </Element>
             <Footer />
             {/* Botón para volver atrás */}
-            <button className="go-back-btn" onClick={handleGoBack}>
-                <FiArrowLeft size={20} style={{ marginRight: "8px" }} />
-                Volver
-            </button>
+            <Link to="/#galeriaImagenes">
+                <button className="go-back-btn" onClick={handleGoBack}>
+                    <FiArrowLeft size={20} style={{ marginRight: "8px" }} />
+                    Volver
+                </button>
+            </Link>
         </div>
     )
 }
