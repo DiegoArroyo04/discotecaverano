@@ -25,7 +25,7 @@ npm install react-icons
   -[X]Fuentes
   -[X]Paleta de colores combina
   -[X]Logos en favicon header y footer
-  -[]Numeros de telefono y informacion redes sociales
+  -[X]Numeros de telefono y informacion redes sociales
   -[X]Despliegue operativo
   -[X]Añadir estadisticas Vercel
 -[X]Preloader
@@ -62,24 +62,24 @@ npm install react-icons
     -[X]Boton de volver
 -[]Ubicacion y contacto
     -[]Lazy loading
-    -[]Mapa
-    -[]Tarjetas RSS
+    -[X]Mapa
+    -[X]Tarjetas RSS
 -[]Footer
-  -[]Logo
-  -[]RSSS
-  -[]Informacion de contacto
-  -[]Email Telefono Direccion
-  -[]Redireccion Textos Legales
--[]Textos Legales
-  -[]Privacidad
+  -X[]Logo
+  -X[]RSSS
+  -[X]Informacion de contacto
+  -[X]Email Telefono Direccion
+  -[X]Redireccion Textos Legales
+-[X]Textos Legales
+  -[X]Privacidad
   -[]Aviso Legal
-  -[]Cookies
-  -[]Modificar css
--[]Banner cookies y cookies
-  -[]Aparece el banner de cookies al entrar en la web
-  -[]El banner de cookies tiene el formato correcto
-  -[]Se debe almacenar informacion para que al darle a aceptar cuando vuelva a entrar en la web,no me recuerde el banner
-  -[]Cookies de ubicacion
+  -[X]Cookies
+  -[X]Modificar css
+-[X]Banner cookies y cookies
+  -[X]Aparece el banner de cookies al entrar en la web
+  -[X]El banner de cookies tiene el formato correcto
+  -[X]Se debe almacenar informacion para que al darle a aceptar cuando vuelva a entrar en la web,no me recuerde el banner
+  -[X]Cookies de ubicacion
 
 
 

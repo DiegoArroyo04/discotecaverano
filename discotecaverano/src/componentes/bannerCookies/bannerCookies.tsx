@@ -30,7 +30,6 @@ export default function BannerCookies() {
     }
 
 
-
     const rechazarCookies = () => {
         setVisible(false);
         localStorage.setItem('cookiesAceptadas', 'false');
@@ -38,7 +37,7 @@ export default function BannerCookies() {
 
     useEffect(() => {
         const cookies = localStorage.getItem('cookiesAceptadas');
-        if (cookies === 'true' || cookies === 'false') {
+        if (cookies === 'true') {
             setVisible(false);
         }
     }, []);

@@ -46,6 +46,7 @@ export default function ModalHome() {
     window.location.href = url;
   };
 
+
   return (
     <div>
       {modalAbierto && (

@@ -86,14 +86,18 @@ const Header: React.FC = () => {
 
                 {/* Navigation */}
                 <nav className="nav">
-                    <ScrollLink to="eventos" smooth={true} duration={500} offset={-90} className="nav-link">
+                    <ScrollLink to="eventos" smooth={true} duration={500} offset={-120} className="nav-link">
                         <Link className="nav-link" to="/">
                             Eventos
                         </Link>
                     </ScrollLink>
                     <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-link">Entradas</a>
-                    <a href="#gallery" className="nav-link">Galería</a>
-                    <a href="#contact" className="nav-link">Contacto</a>
+                    <ScrollLink to="galeriaImagenes" smooth={true} duration={500} offset={-90} className="nav-link">
+                        Galería
+                    </ScrollLink>
+                    <ScrollLink to="contacto" smooth={true} duration={500} offset={-90} className="nav-link">
+                        Contacto
+                    </ScrollLink>
                 </nav>
 
                 {/* Botón menú móvil */}
@@ -107,8 +111,8 @@ const Header: React.FC = () => {
                 <nav className={`nav-mobile ${menuOpen ? 'open' : ''}`}>
                     <ScrollLink to="eventos" smooth={true} duration={500} offset={-90} className="nav-mobile-link" onClick={toggleMenu}>Eventos</ScrollLink>
                     <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-mobile-link" onClick={toggleMenu}>Entradas</a>
-                    <a href="#gallery" className="nav-mobile-link" onClick={toggleMenu}>Galería</a>
-                    <a href="#contact" className="nav-mobile-link" onClick={toggleMenu}>Contacto</a>
+                    <ScrollLink to="galeriaImagenes" smooth={true} duration={500} offset={-90} className="nav-mobile-link" onClick={toggleMenu}>Galería</ScrollLink>
+                    <ScrollLink to="contacto" smooth={true} duration={500} offset={-70} className="nav-mobile-link" onClick={toggleMenu}>Contacto</ScrollLink>
                 </nav>
             </header>
 

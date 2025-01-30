@@ -62,10 +62,10 @@ const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time of at least 2 seconds
+    // Simulate loading time of at least 3 seconds
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);

@@ -57,7 +57,7 @@
     transform: scale(1.1);
 }
 
-iframe {
+.mapa {
     width: 30%;
     height: 250px;
     border-radius: 18px;
@@ -77,7 +77,7 @@ iframe {
         width: 80%;
     }
 
-    iframe {
+    .mapa {
         width: 85%;
     }
 }
