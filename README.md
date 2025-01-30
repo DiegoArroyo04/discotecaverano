@@ -64,9 +64,9 @@ npm install react-icons
     -[]Lazy loading
     -[X]Mapa
     -[X]Tarjetas RSS
--[]Footer
-  -X[]Logo
-  -X[]RSSS
+-[X]Footer
+  -X[X]Logo
+  -X[X]RSSS
   -[X]Informacion de contacto
   -[X]Email Telefono Direccion
   -[X]Redireccion Textos Legales
