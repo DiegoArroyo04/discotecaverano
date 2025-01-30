@@ -30,20 +30,11 @@ export default function ModalHome() {
   const [tarjetaGirada, setTarjetaGirada] = useState(false);
 
 
-  useEffect(() => {
-    // Verificar si el modal ya se mostró en el pasado
-    const modalMostrado = localStorage.getItem('modalMostrado');
-    if (modalMostrado) {
-      setModalAbierto(false);
-    }
-  }, []);
-
 
   // Función para cerrar el modal
   const cerrarModal = () => {
     setModalAbierto(false);  // Cerramos el modal
     setTarjetaGirada(false);
-    localStorage.setItem('modalMostrado', 'true');
   };
 
   const girarTarjeta = () => {
