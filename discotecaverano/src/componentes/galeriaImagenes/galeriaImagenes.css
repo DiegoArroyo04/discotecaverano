@@ -40,6 +40,18 @@
     align-items: center;
     width: 100%;
     position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.galeriaImagenes.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.galeriaImagenes.hidden {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 /* Estilo de Tarjetas */

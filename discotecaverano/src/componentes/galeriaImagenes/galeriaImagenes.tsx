@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Element } from 'react-scroll';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export default function GaleriaImagenes() {
 
@@ -21,11 +22,21 @@ export default function GaleriaImagenes() {
 
     }, []);
 
+    const { ref: titleRef, inView: titleInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.6,
+    });
+
+    const { ref: galeriaImagenesRef, inView: galeriaImagenesInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
     return (
         <Element name="galeriaImagenes">
             <div className='galeriaDeImagenesContainer'>
-                <h2 className='tituloGaleria' >GALERÍA DE IMAGENES</h2>
-                <div className='galeriaImagenes'>
+                <h2 ref={titleRef} className={`tituloGaleria ${titleInView ? "visible" : "hidden"}`}>GALERÍA DE IMAGENES</h2>
+                <div ref={galeriaImagenesRef} className={`galeriaImagenes ${galeriaImagenesInView ? "visible" : "hidden"}`}>
                     <div className='tarjetaAnio anio2023'>
                         <h3>2023</h3>
                         <Link to="/galeria2023#galeria2023">
