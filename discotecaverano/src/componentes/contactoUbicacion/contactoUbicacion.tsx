@@ -1,6 +1,7 @@
 
 import './contactoUbicacion.css'
 import { Element } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export default function ContactoUbicacion() {
 
@@ -9,11 +10,23 @@ export default function ContactoUbicacion() {
         window.open('https://www.instagram.com/aurora.disco', '_blank');
     };
 
+
+    const { ref: titleRef, inView: titleInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.6,
+    });
+
+    const { ref: contenidoRef, inView: contenidoInView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
+
+
     return (
         <Element name="contacto">
             <div className='contactoUbicacion'>
-                <h2 className="tituloPatrocinadores">SOBRE NOSOTROS</h2>
-                <div className='ubicacionInstagram'>
+                <h2 ref={titleRef} className={`tituloPatrocinadores ${titleInView ? "visible" : "hidden"}`}>SOBRE NOSOTROS</h2>
+                <div ref={contenidoRef} className={`ubicacionInstagram ${contenidoInView ? "visible" : "hidden"}`}>
                     <div className="instagram" onClick={handleInstagramClick}>
                         <h2>¡Siguenos En Instagram!</h2>
                         <h3>@aurora.disco</h3>

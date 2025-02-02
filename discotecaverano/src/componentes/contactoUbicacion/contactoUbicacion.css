@@ -16,6 +16,18 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.ubicacionInstagram.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ubicacionInstagram.hidden {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .instagram {
