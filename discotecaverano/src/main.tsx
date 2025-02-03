@@ -16,6 +16,7 @@ import Galeria2023 from './componentes/galeriaImagenes/galeria2023.tsx'
 import Galeria2024 from './componentes/galeriaImagenes/galeria2024.tsx'
 import Galeria2025 from './componentes/galeriaImagenes/galeria2025.tsx'
 import BannerCookies from './componentes/bannerCookies/bannerCookies.tsx'
+import { scroller } from 'react-scroll';
 
 
 const Preloader: React.FC = () => {
@@ -34,9 +35,20 @@ const Preloader: React.FC = () => {
 const Home: React.FC = () => {
 
   useEffect(() => {
-    // Desplazar automáticamente hacia arriba cuando el componente se monta o recarga
+    // Desplazar automáticamente hacia arriba al cargar la página
     window.scrollTo(0, 0);
-  }, []); // El array vacío significa que solo se ejecuta una vez al montarse el componente
+
+    // Comprobar si venimos desde una galería
+    if (window.location.hash === "#galeriaImagenes") {
+      setTimeout(() => {
+        scroller.scrollTo("galeriaImagenes", {
+          duration: 800,
+          offset: -50, // Ajusta según la posición deseada
+          smooth: 'easeInOutQuad',
+        });
+      }, 300); // Retraso para asegurar que la página haya cargado bien
+    }
+  }, []);
 
   return (
 

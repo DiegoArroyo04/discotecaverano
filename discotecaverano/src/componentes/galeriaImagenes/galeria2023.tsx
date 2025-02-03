@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './galeriaImagenesAnios.css';
-import Header from '../header/header';
 import Footer from '../footer/footer';
 import { FiArrowLeft, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import { Element } from 'react-scroll';
+import { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 const imagenes = [
   '/imagenes/2023Imagen1.png', '/imagenes/2023Imagen2.png', '/imagenes/2023Imagen3.png',
@@ -37,19 +39,31 @@ export default function Galeria2023() {
     }
   };
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      scroller.scrollTo(hash, {
+        duration: 800,
+        offset: -170,
+        smooth: 'easeInOutQuad',
+      });
+    }
+  }, []);
+
   return (
     <div>
-      <Header />
       <h1 className='tituloGaleria'>Galería 2023</h1>
-      <div className="galeria">
-        <div className="galeria-grid">
-          {imagenes.map((img, index) => (
-            <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
-              <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
-            </div>
-          ))}
+      <Element name="galeria2023">
+        <div className="galeria">
+          <div className="galeria-grid">
+            {imagenes.map((img, index) => (
+              <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
+                <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </Element>
       <Footer />
 
       {/* Botón para volver atrás */}
@@ -60,16 +74,18 @@ export default function Galeria2023() {
       </Link>
 
       {/* Visor de imágenes en pantalla completa */}
-      {imagenActual !== null && (
-        <div className="modal" onClick={cerrarImagen}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="cerrarImagen" onClick={cerrarImagen}><FiX size={30} /></button>
-            <button className="anterior" onClick={anteriorImagen}><FiChevronLeft size={50} /></button>
-            <img src={imagenes[imagenActual]} className="imagen-grande" alt="Imagen ampliada" />
-            <button className="siguiente" onClick={siguienteImagen}><FiChevronRight size={50} /></button>
+      {
+        imagenActual !== null && (
+          <div className="modal" onClick={cerrarImagen}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="cerrarImagen" onClick={cerrarImagen}><FiX size={30} /></button>
+              <button className="anterior" onClick={anteriorImagen}><FiChevronLeft size={50} /></button>
+              <img src={imagenes[imagenActual]} className="imagen-grande" alt="Imagen ampliada" />
+              <button className="siguiente" onClick={siguienteImagen}><FiChevronRight size={50} /></button>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )
+      }
+    </div >
   );
 }

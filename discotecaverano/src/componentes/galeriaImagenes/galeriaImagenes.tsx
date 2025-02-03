@@ -15,7 +15,7 @@ export default function GaleriaImagenes() {
         if (hash) {
             scroller.scrollTo(hash, {
                 duration: 800,
-                offset: 300,
+                offset: -50,
                 smooth: 'easeInOutQuad',
             });
         }

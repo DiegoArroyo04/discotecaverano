@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './galeriaImagenesAnios.css';
-import Header from '../header/header';
 import Footer from '../footer/footer';
 import { FiArrowLeft, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import { Element } from 'react-scroll';
+import { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 const imagenes = [
     '/imagenes/2024Imagen1.png', '/imagenes/2024Imagen2.png', '/imagenes/2024Imagen3.png',
@@ -37,19 +39,32 @@ export default function Galeria2024() {
         }
     };
 
+    useEffect(() => {
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+            scroller.scrollTo(hash, {
+                duration: 800,
+                offset: -170,
+                smooth: 'easeInOutQuad',
+            });
+        }
+    }, []);
+
     return (
         <div>
-            <Header />
             <h1 className='tituloGaleria'>Galería 2024</h1>
-            <div className="galeria">
-                <div className="galeria-grid">
-                    {imagenes.map((img, index) => (
-                        <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
-                            <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
-                        </div>
-                    ))}
+            <Element name="galeria2024">
+                <div className="galeria">
+                    <div className="galeria-grid">
+                        {imagenes.map((img, index) => (
+                            <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
+                                <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </Element>
+
             <Footer />
 
             {/* Botón para volver atrás */}

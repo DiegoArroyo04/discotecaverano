@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './galeriaImagenesAnios.css';
-import Header from '../header/header';
 import Footer from '../footer/footer';
 import { FiArrowLeft, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import { Element } from 'react-scroll';
+import { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 const imagenes = [
     '/imagenes/2025Imagen1.png', '/imagenes/2025Imagen2.png', '/imagenes/2025Imagen3.png',
@@ -37,24 +39,36 @@ export default function Galeria2025() {
         }
     };
 
+    useEffect(() => {
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+            scroller.scrollTo(hash, {
+                duration: 800,
+                offset: -170,
+                smooth: 'easeInOutQuad',
+            });
+        }
+    }, []);
+
     return (
         <div>
-            <Header />
             <h1 className='tituloGaleria'>Galería 2025</h1>
-            <div className="galeria">
-                <div className="galeria-grid">
-                    {imagenes.map((img, index) => (
-                        <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
-                            <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
-                        </div>
-                    ))}
+            <Element name="galeria2025">
+                <div className="galeria">
+                    <div className="galeria-grid">
+                        {imagenes.map((img, index) => (
+                            <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
+                                <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </Element>
             <Footer />
 
             {/* Botón para volver atrás */}
             <Link to="/#galeriaImagenes">
-                <button className="go-back-btn">
+                <button className="go-back-btn" >
                     <FiArrowLeft size={20} style={{ marginRight: "8px" }} /> Volver
                 </button>
             </Link>

@@ -87,9 +87,7 @@ const Header: React.FC = () => {
                 {/* Navigation */}
                 <nav className="nav">
                     <ScrollLink to="eventos" smooth={true} duration={500} offset={-120} className="nav-link">
-                        <Link className="nav-link" to="/">
-                            Eventos
-                        </Link>
+                        Eventos
                     </ScrollLink>
                     <a href="https://www.fourvenues.com/es/discotecas-madrid/events" target="_blank" className="nav-link">Entradas</a>
                     <ScrollLink to="galeriaImagenes" smooth={true} duration={500} offset={-90} className="nav-link">
