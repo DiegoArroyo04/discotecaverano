@@ -1,84 +1,116 @@
-# discotecaverano
-Pagina Web Discoteca De Verano React
 
-# COMANDOS INSTALACION
+# Discoteca Verano
+
+Proyecto de una página web para una discoteca de verano desarrollado en **React** con **TypeScript**.
+
+## Instalación
+
+### 1. Crear el proyecto con Vite
+```sh
 npm create vite@latest discotecaverano
+```
+Selecciona las opciones:
+- **Framework:** React
+- **Lenguaje:** TypeScript
 
-Selecciones
-    React
-    TypeScript
+### 2. Acceder al proyecto e instalar dependencias
+```sh
+cd discotecaverano
+npm install
+npm run dev
+```
 
-  cd discotecaverano
-  npm install
-  npm run dev
+## Instalación de dependencias adicionales
 
-# RUTAS Y REDIRECCIONES INSTALACION
-npm install react-router-dom
-npm install react-scroll
-npm install --save-dev @types/react-scroll
-npm install react-intersection-observer
-npm i @vercel/analytics
-npm install react-icons
+Las siguientes librerías son necesarias para manejar rutas, efectos de scroll y otros aspectos del proyecto:
 
-# FUNCIONALIDADES 
--[] General
-  -[X]Fuentes
-  -[X]Paleta de colores combina
-  -[X]Logos en favicon header y footer
-  -[X]Numeros de telefono y informacion redes sociales
-  -[X]Despliegue operativo
-  -[X]Añadir estadisticas Vercel
--[X]Preloader
-  -[X]Que entre solo cuando la seccion principal este cargada.
-  -[X]Utilizar el icono definitivo
--[X]Pop up proximo evento
-  -[X]Modal emergente al abrir la pagina
-  -[X]Cambiar estilos boton de cerrar
-  -[X]Cambiar tamaño y textos mas breves boton mas informacion
-  -[X]Responsive moviles muy pequeños
--[X]El logo redirige a la parte de arriba
--[]Los enlaces redirigen a su seccion correspondiente
--[X]Al hacer scrolldown, se cambia el background del header y se le da enfasis a los textos.
--[X]Al hacer hover subrayar enlaces
--[X]Responsive menu hamburguesa
--[X]Responsive redirija a las secciones y se cierre el menu
--[]Proximos Eventos
-  -[X]Lazy loading
-  -[X]Revisar moviles pequeños
-  -[X]Centrar Evento en tablets
--[X]Compra de entradas
--[X]Patrocinadores
-  -[X]Lazy loading
-  -[X]Revisar en movil sombreado
--[X]Banner Cookies
--[X]Header video y textos
--[X]Mas sombras textos
--[]Galeria de imagenes
-    -[X]Contenedor
-    -[X]Imagenes Año
-    -[X]Preevisualizador de imagenes
-    -[]Lazy Loading
-    -[X]Boton de volver
--[]Ubicacion y contacto
-    -[]Lazy loading
-    -[X]Mapa
-    -[X]Tarjetas RSS
--[X]Footer
-  -X[X]Logo
-  -X[X]RSSS
-  -[X]Informacion de contacto
-  -[X]Email Telefono Direccion
-  -[X]Redireccion Textos Legales
--[X]Textos Legales
-  -[X]Privacidad
-  -[]Aviso Legal
-  -[X]Cookies
-  -[X]Modificar css
--[X]Banner cookies y cookies
-  -[X]Aparece el banner de cookies al entrar en la web
-  -[X]El banner de cookies tiene el formato correcto
-  -[X]Se debe almacenar informacion para que al darle a aceptar cuando vuelva a entrar en la web,no me recuerde el banner
-  -[X]Cookies de ubicacion
+```sh
+npm install react-router-dom          # Navegación entre páginas
+npm install react-scroll              # Efectos de scroll
+npm install --save-dev @types/react-scroll  # Tipos para TypeScript
+npm install react-intersection-observer  # Detección de elementos en viewport
+npm i @vercel/analytics             # Analíticas de Vercel
+npm install react-icons             # Iconos para la interfaz
+```
+
+---
+
+## Funcionalidades
+
+### General
+- [x] Fuentes personalizadas.
+- [x] Paleta de colores combinada.
+- [x] Logos en favicon, header y footer.
+- [x] Información de contacto y redes sociales.
+- [x] Despliegue en producción operativo.
+- [x] Añadir estadísticas de Vercel.
+
+### Preloader
+- [x] Solo aparece cuando la sección principal ha cargado.
+- [x] Uso del icono definitivo.
+
+### Pop-up del próximo evento
+- [x] Modal emergente al abrir la página.
+- [x] Mejorar estilos del botón de cerrar.
+- [x] Ajustar tamaño y textos del botón "Más información".
+- [x] Optimización en móviles muy pequeños.
+
+### Navegación
+- [x] El logo redirige a la parte superior de la página.
+- [x] Los enlaces navegan a sus secciones correspondientes.
+- [x] Al hacer scroll, el background del header cambia y resalta los textos.
+- [x] Al hacer hover, los enlaces se subrayan.
+- [x] Menú hamburguesa responsive.
+- [x] Al hacer clic en una sección, el menú hamburguesa se cierra automáticamente.
+
+### Próximos eventos
+- [x] Implementación de **Lazy Loading**.
+- [x] Ajustes para móviles pequeños.
+- [x] Centrado de eventos en tablets.
+
+### Compra de entradas
+- [x] Integración del sistema de compra de entradas.
+
+### Patrocinadores
+- [x] Implementación de **Lazy Loading**.
+- [x] Corrección de sombreado en móviles.
+
+### Banner de cookies
+- [x] Aparece el banner de cookies al entrar.
+- [x] Formato correcto del banner.
+- [x] Al aceptar, la preferencia se almacena y no vuelve a mostrarse.
+- [x] Implementación de cookies de ubicación.
+- [x] Implementación de cookies de preferencias de idioma y color navegador.
+
+### Header (Encabezado)
+- [x] Video de fondo y textos destacados.
+- [x] Mejora en sombras de los textos.
+
+### Galería de imágenes
+- [x] Contenedor para la galería.
+- [x] Imágenes organizadas por año.
+- [x] Previsualizador de imágenes.
+- [x] Implementación de **Lazy Loading**.
+- [x] Botón de "Volver" para navegación cómoda.
+
+### Ubicación y contacto
+- [x] Implementación de **Lazy Loading**.
+- [x] Mapa interactivo.
+- [x] Tarjetas con información de redes sociales.
+
+### Footer (Pie de página)
+- [x] Logo de la discoteca.
+- [x] Enlaces a redes sociales.
+- [x] Información de contacto (Email, teléfono, dirección).
+- [x] Enlaces a textos legales.
+
+### Textos legales
+- [x] Página de privacidad.
+- [x] Aviso legal.
+- [x] Información sobre cookies.
+- [x] Mejora de estilos CSS para mejor legibilidad.
+
+
 
 
 
