@@ -57,7 +57,6 @@ npm install react-icons
     -[X]Contenedor
     -[X]Imagenes Año
     -[X]Preevisualizador de imagenes
-    -[]Redireccion menus
     -[]Lazy Loading
     -[X]Boton de volver
 -[]Ubicacion y contacto

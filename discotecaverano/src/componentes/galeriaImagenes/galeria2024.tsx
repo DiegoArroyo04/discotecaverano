@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Element } from 'react-scroll';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 const imagenes = [
     '/imagenes/2024Imagen1.png', '/imagenes/2024Imagen2.png', '/imagenes/2024Imagen3.png',
@@ -56,11 +57,21 @@ export default function Galeria2024() {
             <Element name="galeria2024">
                 <div className="galeria">
                     <div className="galeria-grid">
-                        {imagenes.map((img, index) => (
-                            <div key={index} className="galeria-item" onClick={() => abrirImagen(index)}>
-                                <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
-                            </div>
-                        ))}
+                        {imagenes.map((img, index) => {
+                            // EJECUCIÓN EN EL BUCLE PARA CADA IMAGEN
+                            const { ref: referenciaImagen, inView: inViewTarjetaEvento } = useInView({
+                                triggerOnce: false,
+                                threshold: 0.3,
+                            });
+
+                            return (
+                                <div key={index} ref={referenciaImagen} className={`galeria-item ${inViewTarjetaEvento ? "visible" : "hidden"}`} onClick={() => abrirImagen(index)}>
+                                    <img src={img} className="galeria-img" alt={`Imagen ${index + 1}`} />
+                                </div>
+                            );
+                        })}
+
+
                     </div>
                 </div>
             </Element>

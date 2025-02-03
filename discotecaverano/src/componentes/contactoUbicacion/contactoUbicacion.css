@@ -48,7 +48,7 @@
 
 .instagram:hover {
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    transform: scale(1.1);
+    transform: scale(1.01);
     box-shadow: 0 10px 20px rgba(255, 0, 123, 0.5);
 }
 
@@ -74,8 +74,6 @@
     height: 250px;
     border-radius: 18px;
 }
-
-
 
 
 /* Responsive */
