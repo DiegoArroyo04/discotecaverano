@@ -303,12 +303,12 @@ p.fecha {
     }
 
     .flip-card-back p {
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin-bottom: 0.6rem;
     }
 
     p.fecha {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
 
     }
 
@@ -318,7 +318,7 @@ p.fecha {
     }
 
     .botonComprar {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 }
 

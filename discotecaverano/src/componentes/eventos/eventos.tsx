@@ -123,6 +123,7 @@ function Eventos() {
 
                 {modalAbierto && eventoSeleccionado && (
                     <div className="containerCartelGrande" onClick={cerrarModal}>
+                        <button className="cerrar" onClick={cerrarModal}>X</button>
                         <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
                             <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
                                 <div className="flip-card-inner">
@@ -131,7 +132,6 @@ function Eventos() {
                                         <button className='boton' onClick={girarTarjeta}>VER MÁS INFORMACIÓN SOBRE EL EVENTO</button>
                                     </div>
                                     <div className="flip-card-back">
-                                        <button className="cerrar" onClick={cerrarModal}>X</button>
                                         <h3 className='eventoTitulo'>{eventoSeleccionado.title}</h3>
                                         <p>{eventoSeleccionado.description}</p>
                                         <p>No esta permitida la venta de bebidas alcohólicas a menores de 18 años.<br />Entrada Prohibida para menores de 16 años </p>

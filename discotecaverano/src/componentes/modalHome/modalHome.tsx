@@ -51,11 +51,9 @@ export default function ModalHome() {
     <div>
       {modalAbierto && (
         <div className="containerCartelGrande" onClick={cerrarModal}>
+          <button className="cerrar" onClick={cerrarModal}>X</button>
           <h1 className='eventoPopUpTitulo'>PRÓXIMO EVENTO</h1>
           <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
-            {!tarjetaGirada && (
-              <button className="cerrar" onClick={cerrarModal}>X</button>
-            )}
             <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
               <div className="flip-card-inner">
                 <div className="popUpDelante">
@@ -63,7 +61,6 @@ export default function ModalHome() {
                   <button className='botonPopUp' onClick={girarTarjeta}>MÁS INFORMACIÓN</button>
                 </div>
                 <div className="flip-card-back">
-                  <button className="cerrar" onClick={cerrarModal}>X</button>
                   <h3 className='eventoTitulo'>{ultimoEvento.title}</h3>
                   <p>{ultimoEvento.description}</p>
                   <p>No está permitida la venta de bebidas alcohólicas a menores de 18 años.<br />Entrada Prohibida para menores de 16 años </p>
