@@ -35,6 +35,11 @@ npm install react-icons             # Iconos para la interfaz
 
 ---
 
+## Acceso al despliegue
+
+[discotecaverano.vercel.app](https://discotecaverano.vercel.app)
+
+
 ## Funcionalidades
 
 ### General
