@@ -90,9 +90,9 @@ export default function Galeria2023() {
           <div className="modal" onClick={cerrarImagen}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <button className="cerrarImagen" onClick={cerrarImagen}><FiX size={30} /></button>
-              <button className="anterior" onClick={anteriorImagen}><FiChevronLeft size={50} /></button>
+              <button className="anterior" onClick={anteriorImagen}><FiChevronLeft size={40} /></button>
               <img src={imagenes[imagenActual]} className="imagen-grande" alt="Imagen ampliada" />
-              <button className="siguiente" onClick={siguienteImagen}><FiChevronRight size={50} /></button>
+              <button className="siguiente" onClick={siguienteImagen}><FiChevronRight size={40} /></button>
             </div>
           </div>
         )

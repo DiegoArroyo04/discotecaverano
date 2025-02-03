@@ -59,7 +59,6 @@
 }
 
 
-
 .flip-card {
     background-color: transparent;
     width: 500px;
@@ -67,6 +66,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 1000px;
+
 }
 
 .flip-card-inner {
@@ -168,6 +169,7 @@ p.fecha {
     text-shadow: 0 0 8px rgba(255, 0, 123, 1), 0 0 12px rgba(255, 0, 123, 1);
 }
 
+
 .cerrar {
     position: absolute;
     padding: 0.6rem;
@@ -185,14 +187,13 @@ p.fecha {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
 .cerrar:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgb(11, 103, 209), 0 0 40px rgb(11, 103, 209), 0 0 60px rgb(11, 103, 209);
 }
-
-
 
 .eventoTitulo {
     color: #00FFFF;
@@ -462,6 +463,10 @@ p.fecha {
         right: 5px;
         width: 25px;
         height: 25px;
+    }
+
+    .cartelGrande {
+        max-width: 320px;
     }
 
 }

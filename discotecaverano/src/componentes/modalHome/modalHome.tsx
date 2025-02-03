@@ -53,6 +53,9 @@ export default function ModalHome() {
         <div className="containerCartelGrande" onClick={cerrarModal}>
           <h1 className='eventoPopUpTitulo'>PRÓXIMO EVENTO</h1>
           <div className="cartelGrande" onClick={(e) => e.stopPropagation()}>
+            {!tarjetaGirada && (
+              <button className="cerrar" onClick={cerrarModal}>X</button>
+            )}
             <div className={`flip-card ${tarjetaGirada ? 'flipped' : ''}`}>
               <div className="flip-card-inner">
                 <div className="popUpDelante">
