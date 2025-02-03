@@ -11,6 +11,16 @@ export default function BannerCookies() {
         setVisible(false);
         localStorage.setItem('cookiesAceptadas', 'true');
 
+        // Guardar el idioma del usuario 
+        const userLanguage = navigator.language;
+        localStorage.setItem('userLanguage', userLanguage);
+
+        // Detectar la preferencia del navegador para el modo oscuro
+        const preferenciaModoOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Guardar  el estado del modo oscuro
+        localStorage.setItem('modoOscuro', preferenciaModoOscuro.toString());
+
         // Obtener la ubicación del usuario
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
